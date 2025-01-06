@@ -75,18 +75,18 @@ def update_strings():
     entity = strings["entity"]
 
     # Load all files in the data_models directory
-    models = {}
+    models = []
     for filename in os.scandir("data_models"):
         if filename.is_file():
             with open(filename.path, "r") as f:
-                models.update(json.load(f))
-
+                s = json.load(f)
+                models.append(s)
 
     # Merge models into strings taking care not to replace any of
     # the existing strings.
     added = 0
     for model in models:
-        attrs = models[model]["dataModel"]["attributes"]
+        attrs = model["dataModel"]["attributes"]
         for attr in attrs:
             platform = entity_type(attr)
             if attr["Instance"] and platform:
@@ -95,20 +95,24 @@ def update_strings():
 
                 name = fixname(attr["AttributeName"])
                 m2m = attr["M2MAttributeName"]
+                print("M2M", m2m)
                 if m2m not in entity[platform]:
+                    print("Added")
                     added = added + 1
                     entity[platform][m2m] = {
                         "name": name
                     }
-                    if "EnumValues" in attr:
-                        if "state" not in entity[platform][m2m]:
-                            entity[platform][m2m]["state"] = {}
+                if "EnumValues" in attr:
+                    if "state" not in entity[platform][m2m]:
+                        entity[platform][m2m]["state"] = {}
 
-                        state = {}
-                        for k, v in remove_prefix(attr["EnumValues"]).items():
-                            if k not in entity[platform][m2m]["state"]:
-                                added = added + 1
-                                entity[platform][m2m]["state"][k] = fixname(v)
+                    state = {}
+                    for k, v in remove_prefix(attr["EnumValues"]).items():
+                        print("STATE", k)
+                        if k not in entity[platform][m2m]["state"]:
+                            print("ADDED")
+                            added = added + 1
+                            entity[platform][m2m]["state"][k] = fixname(v)
 
     if added:
         strings["entity"] = entity

@@ -42,7 +42,7 @@ async def async_get_config_entry_diagnostics(
         data[ndx] = {
             "kind": app.Kind,
             "data": app.data,
-            "model": app.data_model
+            "model": app.data_model[app.said]
         }
         ndx = ndx + 1
 
@@ -59,9 +59,9 @@ async def async_get_device_diagnostics(
     whirlpool = config_entry.runtime_data
     diagnostics_data = whirlpool.manager.get_appliances()
     said = list(list(device.identifiers)[0])[1]
-    appliance = whirlpool.manager.get_appliance(said)
+    app = whirlpool.manager.get_appliance(said)
 
     return {
-        "data_dict": async_redact_data(appliance.data, TO_REDACT),
-        "data_model": async_redact_data(appliance.data_model, TO_REDACT),
+        "data_dict": async_redact_data(app.data, TO_REDACT),
+        "data_model": async_redact_data(app.data_model[app.said], TO_REDACT),
     }

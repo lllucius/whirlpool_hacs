@@ -176,13 +176,41 @@
         "name": "Cycle Select",
         "state": {
           "DryCycleBeddingBulky": "Bedding Bulky",
+          "DryCycleColorsBrights": "Colors Brights",
           "DryCycleDelicate": "Delicate",
           "DryCycleEcoNormal": "Eco Normal",
           "DryCycleHeavyDuty": "Heavy Duty",
           "DryCycleNormal": "Normal",
           "DryCycleRapidDryExpress": "Rapid Dry Express",
+          "DryCycleSanitize": "Sanitize",
+          "DryCycleSteamRefresh": "Steam Refresh",
           "DryCycleTimedDry": "Timed Dry",
           "DryCycleTowels": "Towels",
+          "DryCycleWhatToBulkyHowToHeavyDuty": "What To Bulky How To Heavy Duty",
+          "DryCycleWhatToBulkyHowToQuick": "What To Bulky How To Quick",
+          "DryCycleWhatToBulkyHowToSanitize": "What To Bulky How To Sanitize",
+          "DryCycleWhatToBulkyHowToTimed": "What To Bulky How To Timed",
+          "DryCycleWhatToBulkyHowToWrinkleControl": "What To Bulky How To Wrinkle Control",
+          "DryCycleWhatToColorsBrightsHowToHeavyDuty": "What To Colors Brights How To Heavy Duty",
+          "DryCycleWhatToColorsBrightsHowToQuick": "What To Colors Brights How To Quick",
+          "DryCycleWhatToColorsBrightsHowToSanitize": "What To Colors Brights How To Sanitize",
+          "DryCycleWhatToColorsBrightsHowToTimed": "What To Colors Brights How To Timed",
+          "DryCycleWhatToColorsBrightsHowToWrinkleControl": "What To Colors Brights How To Wrinkle Control",
+          "DryCycleWhatToDelicatesHowToHeavyDuty": "What To Delicates How To Heavy Duty",
+          "DryCycleWhatToDelicatesHowToQuick": "What To Delicates How To Quick",
+          "DryCycleWhatToDelicatesHowToSanitize": "What To Delicates How To Sanitize",
+          "DryCycleWhatToDelicatesHowToTimed": "What To Delicates How To Timed",
+          "DryCycleWhatToDelicatesHowToWrinkleControl": "What To Delicates How To Wrinkle Control",
+          "DryCycleWhatToTowelsHowToHeavyDuty": "What To Towels How To Heavy Duty",
+          "DryCycleWhatToTowelsHowToQuick": "What To Towels How To Quick",
+          "DryCycleWhatToTowelsHowToSanitize": "What To Towels How To Sanitize",
+          "DryCycleWhatToTowelsHowToTimed": "What To Towels How To Timed",
+          "DryCycleWhatToTowelsHowToWrinkleControl": "What To Towels How To Wrinkle Control",
+          "DryCycleWhatToWhitesHowToHeavyDuty": "What To Whites How To Heavy Duty",
+          "DryCycleWhatToWhitesHowToQuick": "What To Whites How To Quick",
+          "DryCycleWhatToWhitesHowToSanitize": "What To Whites How To Sanitize",
+          "DryCycleWhatToWhitesHowToTimed": "What To Whites How To Timed",
+          "DryCycleWhatToWhitesHowToWrinkleControl": "What To Whites How To Wrinkle Control",
           "DryCycleWhites": "Whites",
           "DryCycleWrinkleControlCasual": "Wrinkle Control Casual"
         }
@@ -209,8 +237,9 @@
       "DryCavity_CycleSetWrinkleShield": {
         "name": "Wrinkle Shield",
         "state": {
-          "WrinkleShieldOff": "ff",
-          "WrinkleShieldOn": "n"
+          "WrinkleShieldOff": "Off",
+          "WrinkleShieldOn": "On",
+          "WrinkleShieldOnWithSteam": "On With Steam"
         }
       },
       "DrySys_OpSetDampNotificationToneVolume": {
@@ -367,9 +396,9 @@
       "XCat_SmartGridStatusSmartGridCompliant": {
         "name": "Smart Grid Compliant",
         "state": {
-          "0": "None",
-          "1": "User Override",
-          "2": "Appliance Override"
+          "ApplianceOverride": "Appliance Override",
+          "None": "None",
+          "UserOverride": "User Override"
         }
       }
     },
