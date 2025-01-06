@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
 import json
-from collections import OrderedDict
+import os
 
 def entity_type(model: dict[str, str]):
+    """ Determime the platform for a given attribute. """
     if model["DataType"] == "Boolean":
         if model["DeviceIO"] == "RO":
             return "binary_sensor"
@@ -18,71 +19,103 @@ def entity_type(model: dict[str, str]):
             return "select"
     return None
 
-def merge_dicts(dict1, dict2):
+def remove_prefix(items: dict[str, str]):
+    """ Determine if all values in the dict have a shared prefix.
+
+        In this example the prefix would be "Prefix":
+            {
+                "1", "PrefixOne",
+                "2", "PrefixTwo",
+                "3", "PrefixThree"
+            }
     """
-    Merge two multilevel dictionaries, overwriting values for overlapping keys.
+    values = list(items.values())
+    prefix = values[0]
+    for value in values[1:]:
+        while not value.startswith(prefix):
+            prefix = prefix[:-1]
+            if not prefix:
+                prefix = ""
+                break
+
+    """ Handle cases like this where the "unique" part of the name all start with
+        the same character. Only allows for a single upper case character:
+        {
+            "1", "PrefixOn",
+            "2", "PrefixOff"
+        }
     """
-    result = dict1.copy()
-    for key, value in dict2.items():
-        if isinstance(value, dict):
-            result[key] = merge_dicts(result.get(key, {}), value)
-        else:
-            result[key] = value
-    return result
+    if prefix and prefix[-1].isupper():
+        prefix = prefix[:-1]
 
-def asdf():    
-    def fixname(cc: str):
-        out = ""
-        for c in cc:
-            if c.isupper() and out:
-                out = out + " "
-            out = out + c
-        return out
+    """ Rebuild the dict using the original value as the key and value with the
+        prefix removed.
+    """
+    new = {}
+    for k, v in items.items():
+        new[v] = v[len(prefix):]
+    return new
 
-    def remove_prefix(items: list[str]):
-        values = list(items.values())
-        prefix = values[0]
-        for value in values[1:]:
-            while not value.startswith(prefix):
-                prefix = prefix[:-1]
-                if not prefix:
-                    return items
-        new = {}
-        for k, v in items.items():
-            new[v] = v[len(prefix):]
-        return new
+def fixname(cc: str):
+    """ Break camelcased string into individual words. """
+    out = ""
+    for c in cc:
+        if c.isupper() and out:
+            out = out + " "
+        out = out + c
+    return out
 
-    with open("old.json", "r") as f:
-        old = json.loads(f.read())
+def update_strings():
+    """ Merge all models into existing strings. """
 
-    with open("/home/yam/whirlpool-sixth-sense/models/ddww") as f:
-        attrs = json.loads(f.read())
+    # Load the existing strings
+    strings = {"entity": {}}
+    with open("strings.json", "r") as f:
+        strings = json.load(f)
+    entity = strings["entity"]
 
-    with open("/tmp/strings.json", "w") as f:
-        entities = {}
-        #for app in appliances_manager.get_appliances():
-        del attrs["dataModel"]["id"]
-        for app in attrs["dataModel"]:
-            #for attr in app.data_attrs:
-            for attr in attrs["dataModel"][app]:
-                platform = entity_type(attr)
-                if attr["Instance"] and platform:
-                    name = fixname(attr["AttributeName"])
-                    mapped = attr["MappedAttributeName"]
-                    if platform not in entities:
-                        entities[platform] = {}
-                    entities[platform][mapped] = {
-                       "name": name
+    # Load all files in the data_models directory
+    models = {}
+    for filename in os.scandir("data_models"):
+        if filename.is_file():
+            with open(filename.path, "r") as f:
+                models.update(json.load(f))
+
+
+    # Merge models into strings taking care not to replace any of
+    # the existing strings.
+    added = 0
+    for model in models:
+        attrs = models[model]["dataModel"]["attributes"]
+        for attr in attrs:
+            platform = entity_type(attr)
+            if attr["Instance"] and platform:
+                if platform not in entity:
+                    entity[platform] = {}
+
+                name = fixname(attr["AttributeName"])
+                m2m = attr["M2MAttributeName"]
+                if m2m not in entity[platform]:
+                    added = added + 1
+                    entity[platform][m2m] = {
+                        "name": name
                     }
                     if "EnumValues" in attr:
+                        if "state" not in entity[platform][m2m]:
+                            entity[platform][m2m]["state"] = {}
+
                         state = {}
                         for k, v in remove_prefix(attr["EnumValues"]).items():
-                            state[k] = fixname(v)
-                        entities[platform][mapped]["state"] = state
+                            if k not in entity[platform][m2m]["state"]:
+                                added = added + 1
+                                entity[platform][m2m]["state"][k] = fixname(v)
 
-        strings = {"entities": entities}
+    if added:
+        strings["entity"] = entity
+        with open("new_strings.json", "w") as f:
+            json.dump(strings, f, indent=2, sort_keys=True)
 
-        new = merge_dicts(old, strings)
-        f.write(json.dumps(new, sort_keys=True))
+        print(f"Added {added} strings.\n\nRemember to replace strings.json with new_strings.json.")
 
-asdf()
+update_strings()
+

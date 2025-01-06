@@ -1,31 +1,5 @@
 {
   "config": {
-    "step": {
-      "user": {
-        "title": "Configure your Whirlpool account",
-        "data": {
-          "username": "[%key:common::config_flow::data::username%]",
-          "password": "[%key:common::config_flow::data::password%]",
-          "region": "Region",
-          "brand": "Brand"
-        },
-        "data_description": {
-          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
-        }
-      },
-      "reauth_confirm": {
-        "title": "[%key:common::config_flow::title::reauth%]",
-        "description": "For 'brand', please choose the brand of the mobile app you use, or the brand of the appliances in your account",
-        "data": {
-          "password": "[%key:common::config_flow::data::password%]",
-          "region": "Region",
-          "brand": "Brand"
-        },
-        "data_description": {
-          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
-        }
-      }
-    },
     "abort": {
       "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
       "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
@@ -33,14 +7,43 @@
     "error": {
       "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
       "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
-      "unknown": "[%key:common::config_flow::error::unknown%]",
-      "no_appliances": "No supported appliances found"
+      "no_appliances": "No supported appliances found",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "brand": "Brand",
+          "password": "[%key:common::config_flow::data::password%]",
+          "region": "Region"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        },
+        "description": "For 'brand', please choose the brand of the mobile app you use, or the brand of the appliances in your account",
+        "title": "[%key:common::config_flow::title::reauth%]"
+      },
+      "user": {
+        "data": {
+          "brand": "Brand",
+          "password": "[%key:common::config_flow::data::password%]",
+          "region": "Region",
+          "username": "[%key:common::config_flow::data::username%]"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        },
+        "title": "Configure your Whirlpool account"
+      }
     }
   },
   "entity": {
     "binary_sensor": {
       "Cavity_ChangeStatusExtraPowerChangeable": {
         "name": "Extra Power Changeable"
+      },
+      "Cavity_ChangeStatusSteamChangeable": {
+        "name": "Steam Changeable"
       },
       "Cavity_OpStatusDoorLocked": {
         "name": "Door Locked"
@@ -54,8 +57,14 @@
       "DryCavity_ChangeStatusDryness": {
         "name": "Dryness"
       },
+      "DryCavity_ChangeStatusEcoBoost": {
+        "name": "Eco Boost"
+      },
       "DryCavity_ChangeStatusManualDryTime": {
         "name": "Manual Dry Time"
+      },
+      "DryCavity_ChangeStatusStaticGuard": {
+        "name": "Static Guard"
       },
       "DryCavity_ChangeStatusTemperature": {
         "name": "Temperature"
@@ -77,6 +86,12 @@
       },
       "DryCavity_CycleStatusSensing": {
         "name": "Sensing"
+      },
+      "DryCavity_CycleStatusStaticReduce": {
+        "name": "Static Reduce"
+      },
+      "DryCavity_CycleStatusSteaming": {
+        "name": "Steaming"
       },
       "DryCavity_CycleStatusWet": {
         "name": "Wet"
@@ -332,6 +347,13 @@
           "MachineStateStandby": "Standby"
         }
       },
+      "DryCavity_CycleStatusAirFlowStatus": {
+        "name": "Air Flow Status",
+        "state": {
+          "AirFlowBad": "Bad",
+          "AirFlowGood": "Good"
+        }
+      },
       "WashCavity_OpStatusBulkDispense1Level": {
         "name": "Bulk Dispense1 Level",
         "state": {
@@ -355,8 +377,17 @@
       "Cavity_CycleSetExtraPowerEnable": {
         "name": "Extra Power Enable"
       },
+      "Cavity_CycleSetSteamEnable": {
+        "name": "Steam Enable"
+      },
       "Cavity_DisplaySetDrumLightOn": {
         "name": "Drum Light On"
+      },
+      "DryCavity_CycleSetEcoBoostEnable": {
+        "name": "Eco Boost Enable"
+      },
+      "DryCavity_CycleSetStaticGuardEnable": {
+        "name": "Static Guard Enable"
       },
       "WashCavity_CycleSetFabricSoftenerEnable": {
         "name": "Fabric Softener Enable"
