@@ -38,12 +38,10 @@ class WhirlpoolButton(WhirlpoolEntity, ButtonEntity):
 
     def press(self, **kwargs) -> None:
         """Handle the button press."""
-        manager = self.appliance._app_manager
-        manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
+        elf.appliance.set_boolean(self.m2m_attr, True)
 
     async def async_press(self, **kwargs):
         """Handle the button press."""
-        manager = self.appliance._app_manager
-        await manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
+        await elf.appliance.set_boolean(self.m2m_attr, False)
 
 

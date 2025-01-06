@@ -43,21 +43,17 @@ class WhirlpoolSwitch(WhirlpoolEntity, SwitchEntity):
 
     def turn_on(self, **kwargs) -> None:
         """Turn the entity on."""
-        manager = self.appliance._app_manager
-        manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
+        self.appliance.set_boolean(self.m2m_attr, True)
 
     async def async_turn_on(self, **kwargs):
         """Turn the entity on."""
-        manager = self.appliance._app_manager
-        await manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
+        await self.appliance.set_boolean(self.m2m_attr, True)
 
     def turn_off(self, **kwargs):
         """Turn the entity off."""
-        manager = self.appliance._app_manager
-        manager.send_attributes(self.appliance, {self.m2m_attr: "0"})
+        self.appliance.set_boolean(self.m2m_attr, False)
 
     async def async_turn_off(self, **kwargs):
         """Turn the entity off."""
-        manager = self.appliance._app_manager
-        await manager.send_attributes(self.appliance, {self.m2m_attr: "0"})
+        await self.appliance.set_boolean(self.m2m_attr, False)
 
