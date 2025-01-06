@@ -8,4 +8,5 @@
   "iot_class": "cloud_push",
   "loggers": ["whirlpool"],
   "requirements": []
+  "version": "0.0.0"
 }
