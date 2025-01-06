@@ -1,46 +1,49 @@
 {
   "config": {
-    "step": {
-      "user": {
-        "title": "Configure your Whirlpool account",
-        "data": {
-          "username": "Username",
-          "password": "Password",
-          "region": "Region",
-          "brand": "Brand"
-        },
-        "data_description": {
-          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
-        }
-      },
-      "reauth_confirm": {
-        "title": "[%key:common::config_flow::title::reauth%]",
-        "description": "For 'brand', please choose the brand of the mobile app you use, or the brand of the appliances in your account",
-        "data": {
-          "password": "[%key:common::config_flow::data::password%]",
-          "region": "Region",
-          "brand": "Brand"
-        },
-        "data_description": {
-          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
-        }
-      }
-    },
     "abort": {
-      "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
-      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+      "already_configured": "Account is already configured",
+      "reauth_successful": "Re-authentication was successful"
     },
     "error": {
-      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
-      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
-      "unknown": "[%key:common::config_flow::error::unknown%]",
-      "no_appliances": "No supported appliances found"
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "no_appliances": "No supported appliances found",
+      "unknown": "Unexpected error"
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "brand": "Brand",
+          "password": "Password",
+          "region": "Region"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        },
+        "description": "For 'brand', please choose the brand of the mobile app you use, or the brand of the appliances in your account",
+        "title": "Authentication expired for {name}"
+      },
+      "user": {
+        "data": {
+          "brand": "Brand",
+          "password": "Password]",
+          "region": "Region",
+          "username": "Username"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        },
+        "title": "Configure your Whirlpool account"
+      }
     }
   },
   "entity": {
     "binary_sensor": {
       "Cavity_ChangeStatusExtraPowerChangeable": {
         "name": "Extra Power Changeable"
+      },
+      "Cavity_ChangeStatusSteamChangeable": {
+        "name": "Steam Changeable"
       },
       "Cavity_OpStatusDoorLocked": {
         "name": "Door Locked"
@@ -54,8 +57,14 @@
       "DryCavity_ChangeStatusDryness": {
         "name": "Dryness"
       },
+      "DryCavity_ChangeStatusEcoBoost": {
+        "name": "Eco Boost"
+      },
       "DryCavity_ChangeStatusManualDryTime": {
         "name": "Manual Dry Time"
+      },
+      "DryCavity_ChangeStatusStaticGuard": {
+        "name": "Static Guard"
       },
       "DryCavity_ChangeStatusTemperature": {
         "name": "Temperature"
@@ -77,6 +86,12 @@
       },
       "DryCavity_CycleStatusSensing": {
         "name": "Sensing"
+      },
+      "DryCavity_CycleStatusStaticReduce": {
+        "name": "Static Reduce"
+      },
+      "DryCavity_CycleStatusSteaming": {
+        "name": "Steaming"
       },
       "DryCavity_CycleStatusWet": {
         "name": "Wet"
@@ -161,13 +176,41 @@
         "name": "Cycle Select",
         "state": {
           "DryCycleBeddingBulky": "Bedding Bulky",
+          "DryCycleColorsBrights": "Colors Brights",
           "DryCycleDelicate": "Delicate",
           "DryCycleEcoNormal": "Eco Normal",
           "DryCycleHeavyDuty": "Heavy Duty",
           "DryCycleNormal": "Normal",
           "DryCycleRapidDryExpress": "Rapid Dry Express",
+          "DryCycleSanitize": "Sanitize",
+          "DryCycleSteamRefresh": "Steam Refresh",
           "DryCycleTimedDry": "Timed Dry",
           "DryCycleTowels": "Towels",
+          "DryCycleWhatToBulkyHowToHeavyDuty": "What To Bulky How To Heavy Duty",
+          "DryCycleWhatToBulkyHowToQuick": "What To Bulky How To Quick",
+          "DryCycleWhatToBulkyHowToSanitize": "What To Bulky How To Sanitize",
+          "DryCycleWhatToBulkyHowToTimed": "What To Bulky How To Timed",
+          "DryCycleWhatToBulkyHowToWrinkleControl": "What To Bulky How To Wrinkle Control",
+          "DryCycleWhatToColorsBrightsHowToHeavyDuty": "What To Colors Brights How To Heavy Duty",
+          "DryCycleWhatToColorsBrightsHowToQuick": "What To Colors Brights How To Quick",
+          "DryCycleWhatToColorsBrightsHowToSanitize": "What To Colors Brights How To Sanitize",
+          "DryCycleWhatToColorsBrightsHowToTimed": "What To Colors Brights How To Timed",
+          "DryCycleWhatToColorsBrightsHowToWrinkleControl": "What To Colors Brights How To Wrinkle Control",
+          "DryCycleWhatToDelicatesHowToHeavyDuty": "What To Delicates How To Heavy Duty",
+          "DryCycleWhatToDelicatesHowToQuick": "What To Delicates How To Quick",
+          "DryCycleWhatToDelicatesHowToSanitize": "What To Delicates How To Sanitize",
+          "DryCycleWhatToDelicatesHowToTimed": "What To Delicates How To Timed",
+          "DryCycleWhatToDelicatesHowToWrinkleControl": "What To Delicates How To Wrinkle Control",
+          "DryCycleWhatToTowelsHowToHeavyDuty": "What To Towels How To Heavy Duty",
+          "DryCycleWhatToTowelsHowToQuick": "What To Towels How To Quick",
+          "DryCycleWhatToTowelsHowToSanitize": "What To Towels How To Sanitize",
+          "DryCycleWhatToTowelsHowToTimed": "What To Towels How To Timed",
+          "DryCycleWhatToTowelsHowToWrinkleControl": "What To Towels How To Wrinkle Control",
+          "DryCycleWhatToWhitesHowToHeavyDuty": "What To Whites How To Heavy Duty",
+          "DryCycleWhatToWhitesHowToQuick": "What To Whites How To Quick",
+          "DryCycleWhatToWhitesHowToSanitize": "What To Whites How To Sanitize",
+          "DryCycleWhatToWhitesHowToTimed": "What To Whites How To Timed",
+          "DryCycleWhatToWhitesHowToWrinkleControl": "What To Whites How To Wrinkle Control",
           "DryCycleWhites": "Whites",
           "DryCycleWrinkleControlCasual": "Wrinkle Control Casual"
         }
@@ -194,8 +237,9 @@
       "DryCavity_CycleSetWrinkleShield": {
         "name": "Wrinkle Shield",
         "state": {
-          "WrinkleShieldOff": "ff",
-          "WrinkleShieldOn": "n"
+          "WrinkleShieldOff": "Off",
+          "WrinkleShieldOn": "On",
+          "WrinkleShieldOnWithSteam": "On With Steam"
         }
       },
       "DrySys_OpSetDampNotificationToneVolume": {
@@ -332,6 +376,13 @@
           "MachineStateStandby": "Standby"
         }
       },
+      "DryCavity_CycleStatusAirFlowStatus": {
+        "name": "Air Flow Status",
+        "state": {
+          "AirFlowBad": "Bad",
+          "AirFlowGood": "Good"
+        }
+      },
       "WashCavity_OpStatusBulkDispense1Level": {
         "name": "Bulk Dispense1 Level",
         "state": {
@@ -345,9 +396,9 @@
       "XCat_SmartGridStatusSmartGridCompliant": {
         "name": "Smart Grid Compliant",
         "state": {
-          "0": "None",
-          "1": "User Override",
-          "2": "Appliance Override"
+          "ApplianceOverride": "Appliance Override",
+          "None": "None",
+          "UserOverride": "User Override"
         }
       }
     },
@@ -355,8 +406,17 @@
       "Cavity_CycleSetExtraPowerEnable": {
         "name": "Extra Power Enable"
       },
+      "Cavity_CycleSetSteamEnable": {
+        "name": "Steam Enable"
+      },
       "Cavity_DisplaySetDrumLightOn": {
         "name": "Drum Light On"
+      },
+      "DryCavity_CycleSetEcoBoostEnable": {
+        "name": "Eco Boost Enable"
+      },
+      "DryCavity_CycleSetStaticGuardEnable": {
+        "name": "Static Guard Enable"
       },
       "WashCavity_CycleSetFabricSoftenerEnable": {
         "name": "Fabric Softener Enable"
