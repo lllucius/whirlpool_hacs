@@ -1,0 +1,369 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure your Whirlpool account",
+        "data": {
+          "username": "[%key:common::config_flow::data::username%]",
+          "password": "[%key:common::config_flow::data::password%]",
+          "region": "Region",
+          "brand": "Brand"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        }
+      },
+      "reauth_confirm": {
+        "title": "[%key:common::config_flow::title::reauth%]",
+        "description": "For 'brand', please choose the brand of the mobile app you use, or the brand of the appliances in your account",
+        "data": {
+          "password": "[%key:common::config_flow::data::password%]",
+          "region": "Region",
+          "brand": "Brand"
+        },
+        "data_description": {
+          "brand": "Please choose the brand of the mobile app you use, or the brand of the appliances in your account"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]",
+      "no_appliances": "No supported appliances found"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "Cavity_ChangeStatusExtraPowerChangeable": {
+        "name": "Extra Power Changeable"
+      },
+      "Cavity_OpStatusDoorLocked": {
+        "name": "Door Locked"
+      },
+      "Cavity_OpStatusDoorOpen": {
+        "name": "Door Open"
+      },
+      "DryCavity_ChangeStatusCycleSelect": {
+        "name": "Cycle Select"
+      },
+      "DryCavity_ChangeStatusDryness": {
+        "name": "Dryness"
+      },
+      "DryCavity_ChangeStatusManualDryTime": {
+        "name": "Manual Dry Time"
+      },
+      "DryCavity_ChangeStatusTemperature": {
+        "name": "Temperature"
+      },
+      "DryCavity_ChangeStatusWrinkleShield": {
+        "name": "Wrinkle Shield"
+      },
+      "DryCavity_CycleStatusCoolDown": {
+        "name": "Cool Down"
+      },
+      "DryCavity_CycleStatusDamp": {
+        "name": "Damp"
+      },
+      "DryCavity_CycleStatusDrying": {
+        "name": "Drying"
+      },
+      "DryCavity_CycleStatusLimitedCycle": {
+        "name": "Limited Cycle"
+      },
+      "DryCavity_CycleStatusSensing": {
+        "name": "Sensing"
+      },
+      "DryCavity_CycleStatusWet": {
+        "name": "Wet"
+      },
+      "WashCavity_ChangeStatusBulkDispense1": {
+        "name": "Bulk Dispense1"
+      },
+      "WashCavity_ChangeStatusBulkDispense1Concentration": {
+        "name": "Bulk Dispense1 Concentration"
+      },
+      "WashCavity_ChangeStatusCycleSelect": {
+        "name": "Cycle Select"
+      },
+      "WashCavity_ChangeStatusDeepFill": {
+        "name": "Deep Fill"
+      },
+      "WashCavity_ChangeStatusExtraRinse": {
+        "name": "Extra Rinse"
+      },
+      "WashCavity_ChangeStatusFabricSoftener": {
+        "name": "Fabric Softener"
+      },
+      "WashCavity_ChangeStatusPresoakTimed": {
+        "name": "Presoak Timed"
+      },
+      "WashCavity_ChangeStatusSoilLevel": {
+        "name": "Soil Level"
+      },
+      "WashCavity_ChangeStatusSpinSpeed": {
+        "name": "Spin Speed"
+      },
+      "WashCavity_ChangeStatusTemperature": {
+        "name": "Temperature"
+      },
+      "WashCavity_CycleStatusAddGarment": {
+        "name": "Add Garment"
+      },
+      "WashCavity_CycleStatusCleanDetection": {
+        "name": "Clean Detection"
+      },
+      "WashCavity_CycleStatusCleanReminder": {
+        "name": "Clean Reminder"
+      },
+      "WashCavity_CycleStatusDispensing": {
+        "name": "Dispensing"
+      },
+      "WashCavity_CycleStatusDraining": {
+        "name": "Draining"
+      },
+      "WashCavity_CycleStatusFilling": {
+        "name": "Filling"
+      },
+      "WashCavity_CycleStatusRinsing": {
+        "name": "Rinsing"
+      },
+      "WashCavity_CycleStatusSensing": {
+        "name": "Sensing"
+      },
+      "WashCavity_CycleStatusSoaking": {
+        "name": "Soaking"
+      },
+      "WashCavity_CycleStatusSpinning": {
+        "name": "Spinning"
+      },
+      "WashCavity_CycleStatusWashing": {
+        "name": "Washing"
+      },
+      "WashCavity_OpStatusDispenserDrawerOpen": {
+        "name": "Dispenser Drawer Open"
+      },
+      "XCat_RemoteSetRemoteControlEnable": {
+        "name": "Remote Control Enable"
+      }
+    },
+    "button": {
+      "XCat_WifiSetPublishApplianceState": {
+        "name": "Publish Appliance State"
+      }
+    },
+    "select": {
+      "DryCavity_CycleSetCycleSelect": {
+        "name": "Cycle Select",
+        "state": {
+          "DryCycleBeddingBulky": "Bedding Bulky",
+          "DryCycleDelicate": "Delicate",
+          "DryCycleEcoNormal": "Eco Normal",
+          "DryCycleHeavyDuty": "Heavy Duty",
+          "DryCycleNormal": "Normal",
+          "DryCycleRapidDryExpress": "Rapid Dry Express",
+          "DryCycleTimedDry": "Timed Dry",
+          "DryCycleTowels": "Towels",
+          "DryCycleWhites": "Whites",
+          "DryCycleWrinkleControlCasual": "Wrinkle Control Casual"
+        }
+      },
+      "DryCavity_CycleSetDryness": {
+        "name": "Dryness",
+        "state": {
+          "DrynessLessLow": "Less Low",
+          "DrynessLessMid": "Less Mid",
+          "DrynessMoreMid": "More Mid",
+          "DrynessNormMid": "Norm Mid"
+        }
+      },
+      "DryCavity_CycleSetTemperature": {
+        "name": "Temperature",
+        "state": {
+          "DryTempAir": "Air",
+          "DryTempCoolMid": "Cool Mid",
+          "DryTempHotMid": "Hot Mid",
+          "DryTempWarmHigh": "Warm High",
+          "DryTempWarmMid": "Warm Mid"
+        }
+      },
+      "DryCavity_CycleSetWrinkleShield": {
+        "name": "Wrinkle Shield",
+        "state": {
+          "WrinkleShieldOff": "ff",
+          "WrinkleShieldOn": "n"
+        }
+      },
+      "DrySys_OpSetDampNotificationToneVolume": {
+        "name": "Damp Notification Tone Volume",
+        "state": {
+          "VolumeValueHigh": "High",
+          "VolumeValueOff": "Off"
+        }
+      },
+      "Sys_DisplaySetLanguage": {
+        "name": "Language",
+        "state": {
+          "LanguageCanadianFrench": "Canadian French",
+          "LanguageEnglish": "English",
+          "LanguageLatinAmericanSpanish": "Latin American Spanish"
+        }
+      },
+      "Sys_OpSetAlertToneVolume": {
+        "name": "Alert Tone Volume",
+        "state": {
+          "VolumeValueHigh": "High",
+          "VolumeValueLow": "Low",
+          "VolumeValueMedium": "Medium",
+          "VolumeValueOff": "Off"
+        }
+      },
+      "WashCavity_CycleSetBulkDispense1Enable": {
+        "name": "Bulk Dispense1 Enable",
+        "state": {
+          "BulkDispenseEnableNextCycleDisabled": "Next Cycle Disabled",
+          "BulkDispenseEnablePermanentlyDisabled": "Permanently Disabled",
+          "BulkDispenseEnablePermanentlyEnabled": "Permanently Enabled"
+        }
+      },
+      "WashCavity_CycleSetCycleSelect": {
+        "name": "Cycle Select",
+        "state": {
+          "WashCycleBulky": "Bulky",
+          "WashCycleCleanWasher": "Clean Washer",
+          "WashCycleColdWash": "Cold Wash",
+          "WashCycleColorsBrights": "Colors Brights",
+          "WashCycleDelicates": "Delicates",
+          "WashCycleDrainSpin": "Drain Spin",
+          "WashCycleFaucet": "Faucet",
+          "WashCycleHeavyDuty": "Heavy Duty",
+          "WashCycleNormal": "Normal",
+          "WashCycleQuickWash": "Quick Wash",
+          "WashCycleRinseSpin": "Rinse Spin",
+          "WashCycleSanitize": "Sanitize",
+          "WashCycleTowels": "Towels",
+          "WashCycleWhatToBulkyHowToColdWash": "What To Bulky How To Cold Wash",
+          "WashCycleWhatToBulkyHowToHeavyDuty": "What To Bulky How To Heavy Duty",
+          "WashCycleWhatToBulkyHowToQuick": "What To Bulky How To Quick",
+          "WashCycleWhatToBulkyHowToSanitize": "What To Bulky How To Sanitize",
+          "WashCycleWhatToBulkyHowToWrinkleControl": "What To Bulky How To Wrinkle Control",
+          "WashCycleWhatToColorsBrightsHowToColdWash": "What To Colors Brights How To Cold Wash",
+          "WashCycleWhatToColorsBrightsHowToHeavyDuty": "What To Colors Brights How To Heavy Duty",
+          "WashCycleWhatToColorsBrightsHowToQuick": "What To Colors Brights How To Quick",
+          "WashCycleWhatToColorsBrightsHowToSanitize": "What To Colors Brights How To Sanitize",
+          "WashCycleWhatToColorsBrightsHowToWrinkleControl": "What To Colors Brights How To Wrinkle Control",
+          "WashCycleWhatToDelicatesHowToColdWash": "What To Delicates How To Cold Wash",
+          "WashCycleWhatToDelicatesHowToHeavyDuty": "What To Delicates How To Heavy Duty",
+          "WashCycleWhatToDelicatesHowToQuick": "What To Delicates How To Quick",
+          "WashCycleWhatToDelicatesHowToSanitize": "What To Delicates How To Sanitize",
+          "WashCycleWhatToDelicatesHowToWrinkleControl": "What To Delicates How To Wrinkle Control",
+          "WashCycleWhatToTowelsHowToColdWash": "What To Towels How To Cold Wash",
+          "WashCycleWhatToTowelsHowToHeavyDuty": "What To Towels How To Heavy Duty",
+          "WashCycleWhatToTowelsHowToQuick": "What To Towels How To Quick",
+          "WashCycleWhatToTowelsHowToSanitize": "What To Towels How To Sanitize",
+          "WashCycleWhatToTowelsHowToWrinkleControl": "What To Towels How To Wrinkle Control",
+          "WashCycleWhatToWhitesHowToColdWash": "What To Whites How To Cold Wash",
+          "WashCycleWhatToWhitesHowToHeavyDuty": "What To Whites How To Heavy Duty",
+          "WashCycleWhatToWhitesHowToQuick": "What To Whites How To Quick",
+          "WashCycleWhatToWhitesHowToSanitize": "What To Whites How To Sanitize",
+          "WashCycleWhatToWhitesHowToWrinkleControl": "What To Whites How To Wrinkle Control",
+          "WashCycleWhites": "Whites",
+          "WashCycleWrinkleControl": "Wrinkle Control"
+        }
+      },
+      "WashCavity_CycleSetDeepFillEnable": {
+        "name": "Deep Fill Enable",
+        "state": {
+          "DeepFillHigh": "High",
+          "DeepFillLow": "Low",
+          "DeepFillMax": "Max",
+          "DeepFillMed": "Med"
+        }
+      },
+      "WashCavity_CycleSetSoilLevel": {
+        "name": "Soil Level",
+        "state": {
+          "SoilLevelExtraHeavy": "Extra Heavy",
+          "SoilLevelExtraLight": "Extra Light",
+          "SoilLevelHeavy": "Heavy",
+          "SoilLevelLight": "Light",
+          "SoilLevelNormal": "Normal"
+        }
+      },
+      "WashCavity_CycleSetSpinSpeed": {
+        "name": "Spin Speed",
+        "state": {
+          "SpinSpeedHigh": "High",
+          "SpinSpeedMedium": "Medium",
+          "SpinSpeedOff": "Off"
+        }
+      },
+      "WashCavity_CycleSetTemperature": {
+        "name": "Temperature",
+        "state": {
+          "WashTempCold": "Cold",
+          "WashTempCool": "Cool",
+          "WashTempHot": "Hot",
+          "WashTempTapCold": "Tap Cold",
+          "WashTempWarm": "Warm"
+        }
+      }
+    },
+    "sensor": {
+      "Cavity_CycleStatusMachineState": {
+        "name": "Machine State",
+        "state": {
+          "MachineStateCancelled": "Cancelled",
+          "MachineStateComplete": "Complete",
+          "MachineStateDelayCountdownMode": "Delay Countdown Mode",
+          "MachineStateDelayPause": "Delay Pause",
+          "MachineStateHardStopOrError": "Hard Stop Or Error",
+          "MachineStatePause": "Pause",
+          "MachineStatePowerFailure": "Power Failure",
+          "MachineStateRunningMainCycle": "Running Main Cycle",
+          "MachineStateRunningPostCycle": "Running Post Cycle",
+          "MachineStateSetting": "Setting",
+          "MachineStateSmartDelay": "Smart Delay",
+          "MachineStateSmartGridPause": "Smart Grid Pause",
+          "MachineStateStandby": "Standby"
+        }
+      },
+      "WashCavity_OpStatusBulkDispense1Level": {
+        "name": "Bulk Dispense1 Level",
+        "state": {
+          "BulkDispenseLevelEmpty": "Empty",
+          "BulkDispenseLevelFull": "Full",
+          "BulkDispenseLevelHigh": "High",
+          "BulkDispenseLevelLow": "Low",
+          "BulkDispenseLevelMid": "Mid"
+        }
+      },
+      "XCat_SmartGridStatusSmartGridCompliant": {
+        "name": "Smart Grid Compliant",
+        "state": {
+          "0": "None",
+          "1": "User Override",
+          "2": "Appliance Override"
+        }
+      }
+    },
+    "switch": {
+      "Cavity_CycleSetExtraPowerEnable": {
+        "name": "Extra Power Enable"
+      },
+      "Cavity_DisplaySetDrumLightOn": {
+        "name": "Drum Light On"
+      },
+      "WashCavity_CycleSetFabricSoftenerEnable": {
+        "name": "Fabric Softener Enable"
+      },
+      "XCat_SmartGridSetSmartGridEnable": {
+        "name": "Smart Grid Enable"
+      }
+    }
+  }
+}
