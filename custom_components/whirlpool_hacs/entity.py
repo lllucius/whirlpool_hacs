@@ -56,10 +56,10 @@ class WhirlpoolEntity(Entity):
         self.device: list[WhirlpoolDevice] = device
         self.appliance: Appliance = self.device.appliance
         self.model: str = model
-        self.attr_name = self.model["MappedAttributeName"]
+        self.m2m_attr = self.model["M2MAttributeName"]
 
-        self._attr_unique_id = f"{self.device.config_entry.unique_id}-{self.model["MappedAttributeName"]}"
-        self.translation_key = self.attr_name
+        self.translation_key = self.m2m_attr
+        self._attr_unique_id = f"{self.device.config_entry.unique_id}-{self.m2m_attr}"
 
     @property
     def device_info(self) -> DeviceInfo:
@@ -72,8 +72,7 @@ class WhirlpoolEntity(Entity):
                 self.appliance.model_number,
             ),
             model=self.appliance.model_number,
-            serial_number=self.appliance.serial_number,
-            translation_key=self.model["MappedAttributeName"] #self.attr_name
+            serial_number=self.appliance.serial_number
         )
 
     async def async_added_to_hass(self) -> None:

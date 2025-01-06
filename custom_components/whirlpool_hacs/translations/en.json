@@ -4,8 +4,8 @@
       "user": {
         "title": "Configure your Whirlpool account",
         "data": {
-          "username": "[%key:common::config_flow::data::username%]",
-          "password": "[%key:common::config_flow::data::password%]",
+          "username": "Username",
+          "password": "Password",
           "region": "Region",
           "brand": "Brand"
         },

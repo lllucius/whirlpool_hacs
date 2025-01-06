@@ -51,6 +51,11 @@ class WhirlpoolDevice(DataUpdateCoordinator):
         self.manager: ApplicancesManager = manager
         self.appliance: Appliance = appliance
 
+        self._attr_name = appliance.name
+        self.attr_name = appliance.name
+        self.name = appliance.name
+        print("appliancme", appliance.name)
+
         # Register for the updates provided by the Whirlpool API
         self.appliance.register_attr_callback(self.on_update)
 

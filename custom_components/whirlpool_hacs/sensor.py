@@ -41,11 +41,11 @@ class WhirlpoolSensor(WhirlpoolEntity, SensorEntity):
     @property
     def native_value(self) -> str:
         """Return true if the sensor set."""
-        return self.appliance.get_enum(self.attr_name)
+        return self.appliance.get_enum(self.m2m_attr)
 
     @property
     def options(self) -> list[str]:
         """Return true if the sensor set."""
-        return self.appliance.get_enum_values(self.attr_name)
+        return self.appliance.get_enum_values(self.m2m_attr)
 
 

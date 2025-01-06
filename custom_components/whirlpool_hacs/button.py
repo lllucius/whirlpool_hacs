@@ -39,11 +39,11 @@ class WhirlpoolButton(WhirlpoolEntity, ButtonEntity):
     def press(self, **kwargs) -> None:
         """Handle the button press."""
         manager = self.appliance._app_manager
-        manager.send_attributes(self.appliance, {self.attr_name, "1"})
+        manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
 
     async def async_press(self, **kwargs):
         """Handle the button press."""
         manager = self.appliance._app_manager
-        await manager.send_attributes(self.appliance, {self.attr_name, "1"})
+        await manager.send_attributes(self.appliance, {self.m2m_attr, "1"})
 
 

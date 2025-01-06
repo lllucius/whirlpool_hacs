@@ -39,5 +39,5 @@ class WhirlpoolBinarySensor(WhirlpoolEntity, BinarySensorEntity):
     @property
     def is_on(self) -> bool:
         """Return true if the binary sensor set."""
-        return self.appliance.get_boolean(self.attr_name)
+        return self.appliance.get_boolean(self.m2m_attr)
 

@@ -38,18 +38,18 @@ class WhirlpoolSelect(WhirlpoolEntity, SelectEntity):
     @property
     def current_option(self) -> str:
         """Return true if the sensor set."""
-        return self.appliance.get_enum(self.attr_name)
+        return self.appliance.get_enum(self.m2m_attr)
 
     @property
     def options(self) -> list[str]:
         """Return true if the sensor set."""
-        return self.appliance.get_enum_values(self.attr_name)
+        return self.appliance.get_enum_values(self.m2m_attr)
 
     def select_option(self, option: str) -> None:
         """Change the selected option."""
-        self.appliance.set_enum(self.attr_name, option)
+        self.appliance.set_enum(self.m2m_attr, option)
 
     async def async_select_option(self, option: str) -> None:
         """Change the selected option."""
-        await self.appliance.set_enum(self.attr_name, option)
+        await self.appliance.set_enum(self.m2m_attr, option)
 
