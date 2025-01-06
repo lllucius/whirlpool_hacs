@@ -171,6 +171,53 @@
         "name": "Publish Appliance State"
       }
     },
+    "number": {
+      "Cavity_CycleSetDownloadAndGo": {
+        "name": "Download And Go"
+      },
+      "Cavity_CycleSetSpecialtyCycleId": {
+        "name": "Specialty Cycle Id"
+      },
+      "Cavity_TimeSetDelayTime": {
+        "name": "Delay Time"
+      },
+      "Cavity_TimeStatusDelayTimeRemaining": {
+        "name": "Delay Time Remaining"
+      },
+      "Cavity_TimeStatusEstTimeRemaining": {
+        "name": "Est Time Remaining"
+      },
+      "DryCavity_CycleSetManualDryTime": {
+        "name": "Manual Dry Time"
+      },
+      "WashCavity_CycleSetExtraRinseSelect": {
+        "name": "Extra Rinse Select"
+      },
+      "WashCavity_CycleSetPresoakTimed": {
+        "name": "Presoak Timed"
+      },
+      "WashCavity_OpSetBulkDispense1Concentration": {
+        "name": "Bulk Dispense1 Concentration"
+      },
+      "XCat_ConfigSetMaxCustomCycles": {
+        "name": "Max Custom Cycles"
+      },
+      "XCat_OdometerStatusCycleCount": {
+        "name": "Cycle Count"
+      },
+      "XCat_OdometerStatusRunningHours": {
+        "name": "Running Hours"
+      },
+      "XCat_OdometerStatusTotalHours": {
+        "name": "Total Hours"
+      },
+      "XCat_PersistentInfoVersion": {
+        "name": "Version"
+      },
+      "XCat_WifiStatusRssiAntennaDiversity": {
+        "name": "Rssi Antenna Diversity"
+      }
+    },
     "select": {
       "DryCavity_CycleSetCycleSelect": {
         "name": "Cycle Select",
@@ -376,6 +423,12 @@
           "MachineStateStandby": "Standby"
         }
       },
+      "Cavity_TimeStatusDelayTimeRemaining": {
+        "name": "Delay Time Remaining"
+      },
+      "Cavity_TimeStatusEstTimeRemaining": {
+        "name": "Est Time Remaining"
+      },
       "DryCavity_CycleStatusAirFlowStatus": {
         "name": "Air Flow Status",
         "state": {
@@ -393,6 +446,21 @@
           "BulkDispenseLevelMid": "Mid"
         }
       },
+      "XCat_ConfigSetMaxCustomCycles": {
+        "name": "Max Custom Cycles"
+      },
+      "XCat_OdometerStatusCycleCount": {
+        "name": "Cycle Count"
+      },
+      "XCat_OdometerStatusRunningHours": {
+        "name": "Running Hours"
+      },
+      "XCat_OdometerStatusTotalHours": {
+        "name": "Total Hours"
+      },
+      "XCat_PersistentInfoVersion": {
+        "name": "Version"
+      },
       "XCat_SmartGridStatusSmartGridCompliant": {
         "name": "Smart Grid Compliant",
         "state": {
@@ -400,6 +468,9 @@
           "None": "None",
           "UserOverride": "User Override"
         }
+      },
+      "XCat_WifiStatusRssiAntennaDiversity": {
+        "name": "Rssi Antenna Diversity"
       }
     },
     "switch": {

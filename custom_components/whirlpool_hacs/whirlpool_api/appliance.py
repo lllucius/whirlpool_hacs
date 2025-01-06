@@ -148,6 +148,12 @@ class Appliance:
         val = SETVAL_VALUE_ON if val else SETVAL_VALUE_OFF
         await self._app_manager.send_attributes(self, {attr: val})
 
+    def get_float(self, attr: str) -> float | None:
+        return float(self.get_attribute(attr))
+
+    def get_int(self, attr: str) -> int | None:
+        return int(self.get_attribute(attr))
+
     def get_enum(self, attr: str) -> str | None:
         val = self.get_attribute(attr)
         if not val or attr not in self.data_attrs:

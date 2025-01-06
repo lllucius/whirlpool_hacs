@@ -22,6 +22,12 @@ def entity_type(model: dict[str, str]) -> Platform:
             return Platform.SENSOR
         if model["DeviceIO"] == "RW":
             return Platform.SELECT
+    elif "Integer" in model["DataType"]:
+        if model["DeviceIO"] == "RO":
+            return Platform.SENSOR
+        if model["DeviceIO"] == "RW":
+            return Platform.NUMBER
+
     return None
 
 async def setup_entities(
@@ -68,9 +74,7 @@ class WhirlpoolEntity(Entity):
         return DeviceInfo(
             identifiers={(DOMAIN, self.appliance.said)},
             name=self.appliance.name.title(),
-            manufacturer=get_brand_from_model(
-                self.appliance.model_number,
-            ),
+            manufacturer=get_brand_from_model(self.appliance.model_number),
             model=self.appliance.model_number,
             serial_number=self.appliance.serial_number
         )

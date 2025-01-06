@@ -31,6 +31,7 @@ PLATFORMS = [
     Platform.BUTTON,
     Platform.SWITCH,
 #    Platform.LIGHT,
+    Platform.NUMBER,
     Platform.SELECT,
     Platform.SENSOR,
 ]
