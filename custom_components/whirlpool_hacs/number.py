@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 from homeassistant.components.number import (
+    NumberDeviceClass,
+    NumberEntityDescription,
     NumberEntity,
-    NumberEntityDescription
 )
+
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform, EntityCategory
 from homeassistant.core import HomeAssistant
@@ -16,6 +18,13 @@ from .device import WhirlpoolDevice
 from .entity import WhirlpoolEntity, setup_entities
 
 
+DISABLED: list[str] = [
+]
+
+HIDDEN: list[str] = [
+    "Cavity_CycleSetDownloadAndGo",
+]
+
 async def async_setup_entry(
     hass: HomeAssistant,
     config_entry: ConfigEntry,
@@ -24,7 +33,7 @@ async def async_setup_entry(
     """Set up the Whirlpool Appliances numbers from config entry."""
 
     entities = await setup_entities(
-        hass, config_entry, Platform.NUMBER, WhirlpoolNumber
+        hass, config_entry, Platform.NUMBER, WhirlpoolNumber,
     )
 
     async_add_entities(entities)
@@ -39,10 +48,11 @@ class WhirlpoolNumber(WhirlpoolEntity, NumberEntity):
         self.entity_description = NumberEntityDescription(
             key=self.m2m_attr,
             entity_category=EntityCategory.CONFIG,
+            entity_registry_enabled_default=False if self.m2m_attr in DISABLED else True,
+            entity_registry_visible_default=False if self.m2m_attr in HIDDEN else True,
             native_max_value=self.model["RangeValues"]["Max"],
             native_min_value=self.model["RangeValues"]["Min"],
             native_step=self.model["RangeValues"]["StepSize"],
-            translation_key=self.m2m_attr,
         )
 
     @property

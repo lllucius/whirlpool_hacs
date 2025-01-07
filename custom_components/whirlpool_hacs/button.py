@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from homeassistant.components.button import (
     ButtonDeviceClass,
+    ButtonEntityDescription,
     ButtonEntity,
 )
 from homeassistant.config_entries import ConfigEntry
@@ -15,6 +16,12 @@ from .const import DOMAIN
 from .device import WhirlpoolDevice
 from .entity import WhirlpoolEntity, setup_entities
 
+DISABLED: list[str] = [
+    "XCat_WifiSetPublishApplianceState",
+]
+
+HIDDEN: list[str] = [
+]
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -35,6 +42,12 @@ class WhirlpoolButton(WhirlpoolEntity, ButtonEntity):
     def __init__(self, device: WhirlpoolDevice, model: str) -> None:
         """Initialize the button."""
         super().__init__(device, model)
+
+        self.entity_description = ButtonEntityDescription(
+            key=self.m2m_attr,
+            entity_registry_enabled_default=False if self.m2m_attr in DISABLED else True,
+            entity_registry_visible_default=False if self.m2m_attr in HIDDEN else True,
+        )
 
     def press(self, **kwargs) -> None:
         """Handle the button press."""

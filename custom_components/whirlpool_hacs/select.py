@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from homeassistant.components.select import (
+    SelectEntityDescription,
     SelectEntity,
 )
 from homeassistant.config_entries import ConfigEntry
@@ -14,6 +15,11 @@ from .const import DOMAIN
 from .device import WhirlpoolDevice
 from .entity import WhirlpoolEntity, setup_entities
 
+DISABLED: list[str] = [
+]
+
+HIDDEN: list[str] = [
+]
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -35,15 +41,17 @@ class WhirlpoolSelect(WhirlpoolEntity, SelectEntity):
         """Initialize the select."""
         super().__init__(device, model)
 
+        self.entity_description = SelectEntityDescription(
+            key=self.m2m_attr,
+            entity_registry_enabled_default=False if self.m2m_attr in DISABLED else True,
+            entity_registry_visible_default=False if self.m2m_attr in HIDDEN else True,
+            options=self.appliance.get_enum_values(self.m2m_attr),
+        )
+
     @property
     def current_option(self) -> str:
         """Return true if the sensor set."""
         return self.appliance.get_enum(self.m2m_attr)
-
-    @property
-    def options(self) -> list[str]:
-        """Return true if the sensor set."""
-        return self.appliance.get_enum_values(self.m2m_attr)
 
     def select_option(self, option: str) -> None:
         """Change the selected option."""

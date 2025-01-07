@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
+    SensorEntityDescription,
     SensorEntity,
 )
 from homeassistant.config_entries import ConfigEntry
@@ -15,6 +16,14 @@ from .const import DOMAIN
 from .device import WhirlpoolDevice
 from .entity import WhirlpoolEntity, setup_entities
 
+
+DISABLED: list[str] = [
+]
+
+HIDDEN: list[str] = [
+    "XCat_ConfigSetMaxCustomCycles",
+    "XCat_WifiStatusRssiAntennaDiversity",
+]
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -37,6 +46,12 @@ class WhirlpoolSensor(WhirlpoolEntity, SensorEntity):
     def __init__(self, device: WhirlpoolDevice, model: dict(str, str)) -> None:
         """Initialize the sensor."""
         super().__init__(device, model)
+
+        self.entity_description = SensorEntityDescription(
+            key=self.m2m_attr,
+            entity_registry_enabled_default=False if self.m2m_attr in DISABLED else True,
+            entity_registry_visible_default=False if self.m2m_attr in HIDDEN else True,
+        )
 
     @property
     def native_value(self) -> str:

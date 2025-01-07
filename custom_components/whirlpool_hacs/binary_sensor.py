@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,
+    BinarySensorEntityDescription,
     BinarySensorEntity,
 )
 from homeassistant.config_entries import ConfigEntry
@@ -15,6 +16,11 @@ from .const import DOMAIN
 from .device import WhirlpoolDevice
 from .entity import WhirlpoolEntity, setup_entities
 
+DISABLED: list[str] = [
+]
+
+HIDDEN: list[str] = [
+]
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -35,6 +41,12 @@ class WhirlpoolBinarySensor(WhirlpoolEntity, BinarySensorEntity):
     def __init__(self, device: WhirlpoolDevice, model: str) -> None:
         """Initialize the binary sensor."""
         super().__init__(device, model)
+
+        self.entity_description = BinarySensorEntityDescription(
+            key=self.m2m_attr,
+            entity_registry_enabled_default=False if self.m2m_attr in DISABLED else True,
+            entity_registry_visible_default=False if self.m2m_attr in HIDDEN else True,
+        )
 
     @property
     def is_on(self) -> bool:
