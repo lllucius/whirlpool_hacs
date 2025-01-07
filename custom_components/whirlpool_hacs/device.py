@@ -88,7 +88,7 @@ class WhirlpoolDevice(DataUpdateCoordinator):
     @property
     def is_online(self) -> bool:
         """Return the online status of the oven."""
-        return self.appliance.get_online() | False
+        return self.appliance.is_online() | False
 
 class WhirlpoolOvenDevice(WhirlpoolDevice):
     pass

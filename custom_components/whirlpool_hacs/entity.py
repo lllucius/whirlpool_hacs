@@ -90,5 +90,5 @@ class WhirlpoolEntity(Entity):
     @property
     def available(self) -> bool:
         """Return True if device is available."""
-        return self.appliance.get_online()
+        return self.appliance.is_online()
 

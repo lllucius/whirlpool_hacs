@@ -97,6 +97,40 @@ class Appliance:
     def data_attrs(self, value):
         self._data_attrs = value
 
+    def get_boolean(self, attr: str) -> bool:
+        return self.get_attribute(attr) == "1"
+
+    async def set_boolean(self, attr: str, val: bool) -> None:
+        val = SETVAL_VALUE_ON if val else SETVAL_VALUE_OFF
+        await self._app_manager.send_attributes(self, {attr: val})
+
+    def get_enum(self, attr: str) -> str | None:
+        val = self.get_attribute(attr)
+        if not val or attr not in self.data_attrs:
+            return None
+        return self.data_attrs[attr]["EnumValues"].get(val, None)
+
+    def get_enum_values(self, attr: str) -> list[str] | None:
+        return list(self.data_attrs[attr]["EnumValues"].values())
+
+    async def set_enum(self, attr: str, val: str) -> None:
+        key = [k for k, v in self.data_attrs[attr]["EnumValues"].items() if v == val][0]
+        await self._app_manager.send_attributes(self, {attr: key})
+
+    def get_value(self, attr: str) -> str | None:
+        return self.get_attribute(attr)
+
+    async def set_value(self, attr: str, val: str) -> None:
+        await self._app_manager.send_attributes(self, {attr: val})
+
+    async def set_values(self, attrs: dict[str, str]) -> bool:
+        """Send attributes to appliance api"""
+        return await self._app_manager.send_attributes(self, attrs)
+
+    def get_online(self) -> bool | None:
+        """Get online state for appliance"""
+        return self.get_boolean(ATTR_ONLINE)
+
     async def fetch_data(self):
         await self._app_manager.fetch_appliance_data(self)
 
@@ -140,52 +174,5 @@ class Appliance:
 
         for callback in self._attr_changed:
             callback()
-
-    def get_boolean(self, attr: str) -> bool:
-        return self.get_attribute(attr) == "1"
-
-    async def set_boolean(self, attr: str, val: bool) -> None:
-        val = SETVAL_VALUE_ON if val else SETVAL_VALUE_OFF
-        await self._app_manager.send_attributes(self, {attr: val})
-
-    def get_float(self, attr: str) -> float | None:
-        return float(self.get_attribute(attr))
-
-    def get_int(self, attr: str) -> int | None:
-        return int(self.get_attribute(attr))
-
-    def get_enum(self, attr: str) -> str | None:
-        val = self.get_attribute(attr)
-        if not val or attr not in self.data_attrs:
-            return None
-        return self.data_attrs[attr]["EnumValues"].get(val, None)
-
-    def get_enum_values(self, attr: str) -> list[str] | None:
-        return list(self.data_attrs[attr]["EnumValues"].values())
-
-    async def set_enum(self, attr: str, val: str) -> None:
-        key = [k for k, v in self.data_attrs[attr]["EnumValues"].items() if v == val][0]
-        print("SETENUM", attr, key)
-        await self._app_manager.send_attributes(self, {attr: key})
-
-    def get_online(self) -> bool | None:
-        """Get online state for appliance"""
-        return self.attr_value_to_bool(self.get_attribute(ATTR_ONLINE))
-
-    def bool_to_attr_value(self, b: bool) -> str:
-        """Convert bool to attribute value"""
-        return SETVAL_VALUE_ON if b else SETVAL_VALUE_OFF
-
-    def attr_value_to_bool(self, val: str | None) -> bool | None:
-        """Convert attribute value to bool"""
-        return None if val is None else val == SETVAL_VALUE_ON
-
-    def num_to_attr_value(self, val: int):
-        """Convert int to attribute value"""
-        return str(val)
-
-    def attr_value_to_num(self, val: str):
-        """Convert attribute value to int"""
-        return int(val)
 
 

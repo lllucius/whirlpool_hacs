@@ -87,34 +87,32 @@ class Aircon(Appliance):
         return "airconditioner" in appliance_data.model_key.lower()
 
     def get_current_temp(self):
-        return int(self.get_attribute(ATTR_DISPLAY_TEMP)) / 10
+        return int(self.get_value(ATTR_DISPLAY_TEMP)) / 10
 
     def get_current_humidity(self):
-        return int(self.get_attribute(ATTR_DISPLAY_HUMID))
+        return int(self.get_value(ATTR_DISPLAY_HUMID))
 
     def get_power_on(self):
-        return self.attr_value_to_bool(self.get_attribute(SETTING_POWER))
+        return self.get_boolean(SETTING_POWER)
 
     async def set_power_on(self, on: bool):
-        await self._app_manager.send_attributes(
-            self, {SETTING_POWER: self.bool_to_attr_value(on)}
-        )
+        await self.set_boolean(SETTING_POWER, on)
 
     def get_temp(self):
-        return int(self.get_attribute(SETTING_TEMP)) / 10
+        return int(self.get_value(SETTING_TEMP)) / 10
 
     async def set_temp(self, temp: float):
         tempint = int(temp * 10)
-        await self._app_manager.send_attributes(self, {SETTING_TEMP: str(tempint)})
+        await self.set_value(SETTING_TEMP, str(tempint))
 
     def get_humidity(self):
-        return int(self.get_attribute(SETTING_HUMIDITY))
+        return int(self.get_value(SETTING_HUMIDITY))
 
     async def set_humidity(self, temp: int):
-        await self._app_manager.send_attributes(self, {SETTING_HUMIDITY: str(temp)})
+        await self.set_value(SETTING_HUMIDITY, str(temp))
 
     def get_mode(self):
-        mode_raw = self.get_attribute(ATTR_MODE)
+        mode_raw = self.get_value(ATTR_MODE)
         if mode_raw in [ATTRVAL_MODE_COOL, ATTRVAL_MODE_SIXTH_SENSE_COOL]:
             return Mode.Cool
         if mode_raw in [ATTRVAL_MODE_HEAT, ATTRVAL_MODE_SIXTH_SENSE_HEAT]:
@@ -123,15 +121,15 @@ class Aircon(Appliance):
             return Mode.Fan
 
     def get_sixthsense_mode(self):
-        return self.get_attribute(SETTING_MODE) == SETVAL_MODE_SIXTH_SENSE
+        return self.get_value(SETTING_MODE) == SETVAL_MODE_SIXTH_SENSE
 
     async def set_mode(self, mode: Mode):
         if mode not in MODES_MAP:
             LOGGER.error("Invalid mode")
-        await self._app_manager.send_attributes(self, {SETTING_MODE: MODES_MAP[mode]})
+        await self.set_value(SETTING_MODE, MODES_MAP[mode])
 
     def get_fanspeed(self):
-        fanspeed_raw = self.get_attribute(SETTING_FAN_SPEED)
+        fanspeed_raw = self.get_value(SETTING_FAN_SPEED)
         for k, v in FANSPEED_MAP.items():
             if v == fanspeed_raw:
                 return k
@@ -140,48 +138,39 @@ class Aircon(Appliance):
     async def set_fanspeed(self, speed: FanSpeed):
         if speed not in FANSPEED_MAP:
             LOGGER.error("Invalid fan speed")
-        await self._app_manager.send_attributes(
-            self, {SETTING_FAN_SPEED: FANSPEED_MAP[speed]}
-        )
+        await self.set_value(SETTING_FAN_SPEED, FANSPEED_MAP[speed])
 
     def get_h_louver_swing(self):
-        return self.attr_value_to_bool(self.get_attribute(SETTING_HORZ_LOUVER_SWING))
+        return self.get_boolean(SETTING_HORZ_LOUVER_SWING)
 
     async def set_h_louver_swing(self, swing: bool):
-        await self._app_manager.send_attributes(
-            self, {SETTING_HORZ_LOUVER_SWING: self.bool_to_attr_value(swing)}
-        )
+        await self.set_boolean(SETTING_HORZ_LOUVER_SWING, swing)
 
     def get_turbo_mode(self):
-        return self.attr_value_to_bool(self.get_attribute(SETTING_TURBO_MODE))
+        return self.get_boolean(SETTING_TURBO_MODE)
 
     async def set_turbo_mode(self, turbo: bool):
-        await self._app_manager.send_attributes(
-            self, {SETTING_TURBO_MODE: self.bool_to_attr_value(turbo)}
-        )
+        await self.set_boolean(SETTING_TURBO_MODE, turbo)
 
     def get_eco_mode(self):
-        return self.attr_value_to_bool(self.get_attribute(SETTING_ECO_MODE))
+        return self.get_boolean(SETTING_ECO_MODE)
 
     async def set_eco_mode(self, eco: bool):
-        await self._app_manager.send_attributes(
-            self, {SETTING_ECO_MODE: self.bool_to_attr_value(eco)}
-        )
+        await self.set_boolean(SETTING_ECO_MODE, eco)
 
     def get_quiet_mode(self):
-        return self.attr_value_to_bool(self.get_attribute(SETTING_QUIET_MODE))
+        return self.get_boolean(SETTING_QUIET_MODE)
 
     async def set_quiet_mode(self, quiet: bool):
-        await self._app_manager.send_attributes(
-            self, {SETTING_QUIET_MODE: self.bool_to_attr_value(quiet)}
-        )
+        await self.set_boolean(SETTING_QUIET_MODE, quiet)
 
     def get_display_on(self):
         return (
-            self.get_attribute(SETTING_DISPLAY_BRIGHTNESS)
+            self.get_value(SETTING_DISPLAY_BRIGHTNESS)
             == SETVAL_DISPLAY_BRIGHTNESS_ON
         )
 
     async def set_display_on(self, on: bool):
         bri = SETVAL_DISPLAY_BRIGHTNESS_ON if on else SETVAL_DISPLAY_BRIGHTNESS_OFF
-        await self._app_manager.send_attributes(self, {SETTING_DISPLAY_BRIGHTNESS: bri})
+        await self.set_value(SETTING_DISPLAY_BRIGHTNESS, bri)
+

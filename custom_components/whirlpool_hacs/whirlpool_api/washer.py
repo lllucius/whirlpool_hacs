@@ -88,26 +88,27 @@ class Washer(Appliance):
         return appliance_data.model_number == Washer.Model
 
     def get_machine_state(self):
-        state_raw = self.get_attribute(ATTR_MACHINE_STATE)
+        state_raw = self.get_value(ATTR_MACHINE_STATE)
         for k, v in MACHINE_STATE_MAP.items():
             if v == state_raw:
                 return k
         return None
 
     def get_cycle_status_sensing(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_SENSING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_SENSING)
 
     def get_cycle_status_filling(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_FILLING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_FILLING)
 
     def get_cycle_status_soaking(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_SOAKING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_SOAKING)
 
     def get_cycle_status_washing(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_WASHING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_WASHING)
 
     def get_cycle_status_rinsing(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_RINSING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_RINSING)
 
     def get_cycle_status_spinning(self):
-        return self.attr_value_to_bool(self.get_attribute(ATTR_CYCLE_STATUS_SPINNING))
+        return self.get_boolean(ATTR_CYCLE_STATUS_SPINNING)
+

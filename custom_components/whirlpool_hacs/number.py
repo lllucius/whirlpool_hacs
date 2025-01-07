@@ -36,34 +36,25 @@ class WhirlpoolNumber(WhirlpoolEntity, NumberEntity):
         """Initialize the number."""
         super().__init__(device, model)
 
-        if self.model["DeviceIO"] == "RO":
-            category = EntityCategory.DIAGNOSTIC
-            val = self.appliance.get_float(self.m2m_attr)
-            maxval = val
-            minval = val
-            step = 1
-        else:
-            category = EntityCategory.CONFIG
-            maxval=self.model["RangeValues"]["Max"],
-            minval=self.model["RangeValues"]["Min"],
-            step=self.model["RangeValues"]["StepSize"]
-
         self.entity_description = NumberEntityDescription(
             key=self.m2m_attr,
-            entity_category=category,
-            native_max_value=maxval,
-            native_min_value=minval,
-            native_step=step
+            entity_category=EntityCategory.CONFIG,
+            native_max_value=self.model["RangeValues"]["Max"],
+            native_min_value=self.model["RangeValues"]["Min"],
+            native_step=self.model["RangeValues"]["StepSize"],
+            translation_key=self.m2m_attr,
         )
 
     @property
     def native_value(self) -> float | None:
         """Return the value reported by the number."""
-        return self.appliance.get_float(self.m2m_attr)
+        return float(self.appliance.get_value(self.m2m_attr))
 
     def set_native_value(self, value: float) -> None:
         """Update the current value."""
+        self.appliance.set_value(self.m2m_attr, str(value))
 
     async def async_set_native_value(self, value: float) -> None:
         """Update the current value."""
+        await self.appliance.set_value(self.m2m_attr, str(value))
 
