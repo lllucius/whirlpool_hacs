@@ -59,7 +59,7 @@ def remove_prefix(items: dict[str, str]):
     """
     new = {}
     for k, v in items.items():
-        new[v] = v[len(prefix):]
+        new[v] = v[len(prefix):] if len(values) > 1 else v
     return new
 
 def fixname(cc: str):
@@ -87,9 +87,7 @@ def merge(target, source):
 
                 name = fixname(attr["AttributeName"])
                 m2m = attr["M2MAttributeName"]
-                print("M2M", m2m)
                 if m2m not in entity[platform]:
-                    print("Added")
                     added = added + 1
                     entity[platform][m2m] = {
                         "name": name
@@ -100,9 +98,7 @@ def merge(target, source):
 
                     state = {}
                     for k, v in remove_prefix(attr["EnumValues"]).items():
-                        print("STATE", k)
                         if k not in entity[platform][m2m]["state"]:
-                            print("ADDED")
                             added = added + 1
                             entity[platform][m2m]["state"][k] = fixname(v)
 
@@ -143,6 +139,7 @@ def update_strings():
                         entity[platform][m2m] = {
                             "name": name
                         }
+
                     if "EnumValues" in attr:
                         if "state" not in entity[platform][m2m]:
                             entity[platform][m2m]["state"] = {}

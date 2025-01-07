@@ -686,7 +686,7 @@
       "Sys_DisplayStatusBroilDisplayType": {
         "name": "Broil Display Type",
         "state": {
-          "VariableTemperature": ""
+          "VariableTemperature": "Variable Temperature"
         }
       },
       "WashCavity_OpStatusBulkDispense1Level": {
