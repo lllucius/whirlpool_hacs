@@ -176,8 +176,7 @@ class KitchenTimer:
         return None
 
     async def set_timer(self, timer_time: int, operation=KitchenTimerOperations.Start):
-        await self._app_manager.send_attributes(
-            self._appliance,
+       await self.send_values(
             {
                 self._attr_prefix
                 + ATTR_POSTFIX_KITCHEN_TIMER_SET_TIME: int(timer_time),
@@ -189,8 +188,7 @@ class KitchenTimer:
         )
 
     async def cancel_timer(self):
-        await self._app_manager.send_attributes(
-            self._appliance,
+        await self.send_values(
             {
                 self._attr_prefix
                 + ATTR_POSTFIX_KITCHEN_TIMER_SET_OPS: KITCHEN_TIMER_OPERATIONS_MAP[
