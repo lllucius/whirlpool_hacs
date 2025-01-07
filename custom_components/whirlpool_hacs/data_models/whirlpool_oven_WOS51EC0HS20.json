@@ -1,0 +1,4112 @@
+{
+  "_id": "**REDACTED**",
+  "_rev": "31-a090020a9dcaf7dd0d3abcb8327d69c6",
+  "ddm": {
+    "_id": "**REDACTED**",
+    "ddmName": "DDM_COOKING_MINERVA_SINGLE_BIO5_V2",
+    "modelNo": "WOS51EC0HS00,WOS51EC0HS,WOS51EC0HB00,WOS51EC0HB,WOS51EC0HW00,WOS51EC0HW,WOS51EC7HS00,WOS51EC7HS,WOS51EC7HB00,WOS51EC7HB,WOS51EC7HW00,WOS51EC7HW,WOS51EC7HS01,WOS51EC0HS01,WOS51EC0HB01,WOS51EC0HW01,WOS51EC7HB01,WOS51EC7HW01,WOS51EC0HS20,WOS51EC0HW20,WOS51EC7HB20,WOS51EC7HS20,WOS51EC7HW20,WOS51EC7HB21,WOS51EC7HS21,WOS51EC0HS10,WOS51EC7HW21,WOS51EC0HB20,WOS51EC0HS42,WOS51EC0HSp1,WOS51EC0JS02,WOS51EC0HS,WOS51EC0HS,WOS51EC0HS",
+    "createdAt": null,
+    "createdBy": "MANIKP",
+    "brandName": "Whirlpool",
+    "category": "Cooking",
+    "version": "1",
+    "ccuriVersion": "47",
+    "ccURI": "API144_COOKING_V47"
+  },
+  "dataModel": {
+    "attributes": [
+      {
+        "M2MAttributeName": "XCat_PersistentInfoVersion",
+        "Instance": "XCat_PersistentInfo",
+        "AttributeName": "Version",
+        "Key": "0x01010001",
+        "MappedAttributeName": "XCat_PersistentInfoVersion",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 53,
+        "RangeValues": {
+          "Min": 53,
+          "Max": 53,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_PersistentInfoSaid",
+        "Instance": "XCat_PersistentInfo",
+        "AttributeName": "Said",
+        "Key": "0x01010002",
+        "MappedAttributeName": "XCat_PersistentInfoSaid",
+        "DataType": "String",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_PersistentInfoMacAddress",
+        "Instance": "XCat_PersistentInfo",
+        "AttributeName": "MacAddress",
+        "Key": "0x01010003",
+        "MappedAttributeName": "XCat_PersistentInfoMacAddress",
+        "DataType": "String",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_WifiStatusRssiAntennaDiversity",
+        "Instance": "XCat_WifiStatus",
+        "AttributeName": "RssiAntennaDiversity",
+        "Key": "0x01020001",
+        "MappedAttributeName": "XCat_WifiStatusRssiAntennaDiversity",
+        "DataType": "IntegerSigned8Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": -99,
+        "RangeValues": {
+          "Min": -99,
+          "Max": -10,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_WifiStatusIspCheck",
+        "Instance": "XCat_WifiStatus",
+        "AttributeName": "IspCheck",
+        "Key": "0x01020006",
+        "MappedAttributeName": "XCat_WifiStatusIspCheck",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_PowerStatusPowerOutage",
+        "Instance": "XCat_PowerStatus",
+        "AttributeName": "PowerOutage",
+        "Key": "0x01030006",
+        "MappedAttributeName": "XCat_PowerStatusPowerOutage",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_OdometerStatusRunningHours",
+        "Instance": "XCat_OdometerStatus",
+        "AttributeName": "RunningHours",
+        "Key": "0x01050001",
+        "MappedAttributeName": "XCat_OdometerStatusRunningHours",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_OdometerStatusTotalHours",
+        "Instance": "XCat_OdometerStatus",
+        "AttributeName": "TotalHours",
+        "Key": "0x01050002",
+        "MappedAttributeName": "XCat_OdometerStatusTotalHours",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_OdometerStatusCycleCount",
+        "Instance": "XCat_OdometerStatus",
+        "AttributeName": "CycleCount",
+        "Key": "0x01050003",
+        "MappedAttributeName": "XCat_OdometerStatusCycleCount",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_ApplianceInfoSetModelNumber",
+        "Instance": "XCat_ApplianceInfoSet",
+        "AttributeName": "ModelNumber",
+        "Key": "0x01060001",
+        "MappedAttributeName": "XCat_ApplianceInfoSetModelNumber",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_ApplianceInfoSetSerialNumber",
+        "Instance": "XCat_ApplianceInfoSet",
+        "AttributeName": "SerialNumber",
+        "Key": "0x01060002",
+        "MappedAttributeName": "XCat_ApplianceInfoSetSerialNumber",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_DateTimeSetDateTimeSet",
+        "Instance": "XCat_DateTimeSet",
+        "AttributeName": "DateTimeSet",
+        "Key": "0x01070001",
+        "MappedAttributeName": "XCat_DateTimeSetDateTimeSet",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_RemoteSetRemoteControlEnable",
+        "Instance": "XCat_RemoteSet",
+        "AttributeName": "RemoteControlEnable",
+        "Key": "0x01080001",
+        "MappedAttributeName": "XCat_RemoteSetRemoteControlEnable",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_RemoteSetRebootAppliance",
+        "Instance": "XCat_RemoteSet",
+        "AttributeName": "RebootAppliance",
+        "Key": "0x01080003",
+        "MappedAttributeName": "XCat_RemoteSetRebootAppliance",
+        "DataType": "enum",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "CancelResetRequest",
+          "1": "ResetRequest",
+          "2": "ExecuteReset"
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetPublishApplianceState",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "PublishApplianceState",
+        "Key": "0x01090001",
+        "MappedAttributeName": "XCat_WifiSetPublishApplianceState",
+        "DataType": "Boolean",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetRebootWifiCommModule",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "RebootWifiCommModule",
+        "Key": "0x01090002",
+        "MappedAttributeName": "XCat_WifiSetRebootWifiCommModule",
+        "DataType": "Boolean",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetDeprovisionWifiCommModule",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "DeprovisionWifiCommModule",
+        "Key": "0x01090003",
+        "MappedAttributeName": "XCat_WifiSetDeprovisionWifiCommModule",
+        "DataType": "Boolean",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetDisableWifiCommModule",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "DisableWifiCommModule",
+        "Key": "0x01090004",
+        "MappedAttributeName": "XCat_WifiSetDisableWifiCommModule",
+        "DataType": "Boolean",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetIspAuthorized",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "IspAuthorized",
+        "Key": "0x01090005",
+        "MappedAttributeName": "XCat_WifiSetIspAuthorized",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "IspAuthorizedNotAuthorized",
+          "1": "IspAuthorizedSchedule",
+          "2": "IspAuthorizedImmediate"
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_WifiSetIspFirmwareDescriptionUrl",
+        "Instance": "XCat_WifiSet",
+        "AttributeName": "IspFirmwareDescriptionUrl",
+        "Key": "0x01090006",
+        "MappedAttributeName": "XCat_WifiSetIspFirmwareDescriptionUrl",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "XCat_ConfigSetMaxRelationalSteps",
+        "Instance": "XCat_ConfigSet",
+        "AttributeName": "MaxRelationalSteps",
+        "Key": "0x010C0002",
+        "MappedAttributeName": "XCat_ConfigSetMaxRelationalSteps",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "XCat_ConfigSetMaxRelationalMemory",
+        "Instance": "XCat_ConfigSet",
+        "AttributeName": "MaxRelationalMemory",
+        "Key": "0x010C0003",
+        "MappedAttributeName": "XCat_ConfigSetMaxRelationalMemory",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_DisplayStatusBroilDisplayType",
+        "Instance": "Sys_DisplayStatus",
+        "AttributeName": "BroilDisplayType",
+        "Key": "0x02010001",
+        "MappedAttributeName": "Sys_DisplayStatusBroilDisplayType",
+        "DataType": "enum",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "2": "VariableTemperature"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_AlertStatusCustomerFaultCode",
+        "Instance": "Sys_AlertStatus",
+        "AttributeName": "CustomerFaultCode",
+        "Key": "0x02020001",
+        "MappedAttributeName": "Sys_AlertStatusCustomerFaultCode",
+        "DataType": "String",
+        "DeviceIO": "RO",
+        "IsTimeSeries": true,
+        "IsTemplate": false,
+        "Default": "F0,E0,0"
+      },
+      {
+        "M2MAttributeName": "Sys_AlertStatusNotification",
+        "Instance": "Sys_AlertStatus",
+        "AttributeName": "Notification",
+        "Key": "0x02020003",
+        "MappedAttributeName": "Sys_AlertStatusNotification",
+        "DataType": "enum",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "None",
+          "1": "PreheatMinus25",
+          "2": "PreheatComplete"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetLanguage",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "Language",
+        "Key": "0x02030001",
+        "MappedAttributeName": "Sys_DisplaySetLanguage",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "English",
+          "1": "CanadianFrench",
+          "2": "LatinAmericanSpanish"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetTempUnits",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "TempUnits",
+        "Key": "0x02030002",
+        "MappedAttributeName": "Sys_DisplaySetTempUnits",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "1",
+        "EnumValues": {
+          "0": "DegreesC",
+          "1": "DegreesF"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetEnable24Hour",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "Enable24Hour",
+        "Key": "0x02030006",
+        "MappedAttributeName": "Sys_DisplaySetEnable24Hour",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetImage",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "Image",
+        "Key": "0x02030008",
+        "MappedAttributeName": "Sys_DisplaySetImage",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetBrightnessPercent",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "BrightnessPercent",
+        "Key": "0x0203000A",
+        "MappedAttributeName": "Sys_DisplaySetBrightnessPercent",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 100,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_DisplaySetCompleteActionTimeout",
+        "Instance": "Sys_DisplaySet",
+        "AttributeName": "CompleteActionTimeout",
+        "Key": "0x0203000D",
+        "MappedAttributeName": "Sys_DisplaySetCompleteActionTimeout",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 120,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_OperationSetControlLock",
+        "Instance": "Sys_OperationSet",
+        "AttributeName": "ControlLock",
+        "Key": "0x02040002",
+        "MappedAttributeName": "Sys_OperationSetControlLock",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "Sys_OperationSetKeyPressToneVolume",
+        "Instance": "Sys_OperationSet",
+        "AttributeName": "KeyPressToneVolume",
+        "Key": "0x02040004",
+        "MappedAttributeName": "Sys_OperationSetKeyPressToneVolume",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "3",
+        "EnumValues": {
+          "0": "VolumeOff",
+          "1": "VolumeLow",
+          "2": "VolumeMedium",
+          "3": "VolumeHigh",
+          "4": "VolumeMax"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_OperationSetAlertToneVolume",
+        "Instance": "Sys_OperationSet",
+        "AttributeName": "AlertToneVolume",
+        "Key": "0x02040008",
+        "MappedAttributeName": "Sys_OperationSetAlertToneVolume",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "3",
+        "EnumValues": {
+          "0": "VolumeOff",
+          "1": "VolumeLow",
+          "2": "VolumeMedium",
+          "3": "VolumeHigh",
+          "4": "VolumeMax"
+        }
+      },
+      {
+        "M2MAttributeName": "Sys_OperationSetSabbathModeEnabled",
+        "Instance": "Sys_OperationSet",
+        "AttributeName": "SabbathModeEnabled",
+        "Key": "0x02040009",
+        "MappedAttributeName": "Sys_OperationSetSabbathModeEnabled",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "Sys_OperationSetQuietModeEnabled",
+        "Instance": "Sys_OperationSet",
+        "AttributeName": "QuietModeEnabled",
+        "Key": "0x02040012",
+        "MappedAttributeName": "Sys_OperationSetQuietModeEnabled",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "SysHeader_RecipeSetRecipeId",
+        "Instance": "SysHeader_RecipeSet",
+        "AttributeName": "RecipeId",
+        "Key": "0x02050001",
+        "MappedAttributeName": "SysHeader_RecipeSetRecipeId",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "SysHeader_RecipeSetRecipeSummary",
+        "Instance": "SysHeader_RecipeSet",
+        "AttributeName": "RecipeSummary",
+        "Key": "0x02050002",
+        "MappedAttributeName": "SysHeader_RecipeSetRecipeSummary",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "SysHeader_RecipeSetRecipeTime",
+        "Instance": "SysHeader_RecipeSet",
+        "AttributeName": "RecipeTime",
+        "Key": "0x02050003",
+        "MappedAttributeName": "SysHeader_RecipeSetRecipeTime",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_TimeStatusCookTimeRemaining",
+        "Instance": "OvenUpperCavity_TimeStatus",
+        "AttributeName": "CookTimeRemaining",
+        "Key": "0x03010001",
+        "MappedAttributeName": "OvenUpperCavity_TimeStatusCookTimeRemaining",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_TimeStatusCycleTimeElapsed",
+        "Instance": "OvenUpperCavity_TimeStatus",
+        "AttributeName": "CycleTimeElapsed",
+        "Key": "0x03010002",
+        "MappedAttributeName": "OvenUpperCavity_TimeStatusCycleTimeElapsed",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_TimeStatusDelayTimeRemaining",
+        "Instance": "OvenUpperCavity_TimeStatus",
+        "AttributeName": "DelayTimeRemaining",
+        "Key": "0x03010003",
+        "MappedAttributeName": "OvenUpperCavity_TimeStatusDelayTimeRemaining",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplStatusDisplayTemp",
+        "Instance": "OvenUpperCavity_DisplStatus",
+        "AttributeName": "DisplayTemp",
+        "Key": "0x03020001",
+        "MappedAttributeName": "OvenUpperCavity_DisplStatusDisplayTemp",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpStatusCookTimeState",
+        "Instance": "OvenUpperCavity_OpStatus",
+        "AttributeName": "CookTimeState",
+        "Key": "0x03030001",
+        "MappedAttributeName": "OvenUpperCavity_OpStatusCookTimeState",
+        "DataType": "enum",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Idle",
+          "1": "Running",
+          "3": "Complete"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpStatusDoorOpen",
+        "Instance": "OvenUpperCavity_OpStatus",
+        "AttributeName": "DoorOpen",
+        "Key": "0x03030002",
+        "MappedAttributeName": "OvenUpperCavity_OpStatusDoorOpen",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpStatusState",
+        "Instance": "OvenUpperCavity_OpStatus",
+        "AttributeName": "State",
+        "Key": "0x03030003",
+        "MappedAttributeName": "OvenUpperCavity_OpStatusState",
+        "DataType": "enum",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Idle",
+          "1": "Preheating",
+          "2": "Steady",
+          "3": "Programming",
+          "4": "Delaying",
+          "5": "Cooling"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpStatusDoorLocked",
+        "Instance": "OvenUpperCavity_OpStatus",
+        "AttributeName": "DoorLocked",
+        "Key": "0x03030004",
+        "MappedAttributeName": "OvenUpperCavity_OpStatusDoorLocked",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_TimeSetCookTimeSet",
+        "Instance": "OvenUpperCavity_TimeSet",
+        "AttributeName": "CookTimeSet",
+        "Key": "0x030D0001",
+        "MappedAttributeName": "OvenUpperCavity_TimeSetCookTimeSet",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_TimeSetDelayTime",
+        "Instance": "OvenUpperCavity_TimeSet",
+        "AttributeName": "DelayTime",
+        "Key": "0x030D0003",
+        "MappedAttributeName": "OvenUpperCavity_TimeSetDelayTime",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetLightOn",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "LightOn",
+        "Key": "0x030E0001",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetLightOn",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetCookingImageUrI",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "CookingImageUrI",
+        "Key": "0x030E0002",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetCookingImageUrI",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetZonedMessage",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "ZonedMessage",
+        "Key": "0x030E0004",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetZonedMessage",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetCycleCompleteMessage",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "CycleCompleteMessage",
+        "Key": "0x030E0005",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetCycleCompleteMessage",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetUserInstructImageUrl",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "UserInstructImageUrl",
+        "Key": "0x030E0007",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetUserInstructImageUrl",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetEmbUsrInsCmpltAction",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "EmbUsrInsCmpltAction",
+        "Key": "0x030E000E",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetEmbUsrInsCmpltAction",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Unset",
+          "1": "AutoAdvance",
+          "2": "WaitForNextCmd",
+          "3": "WaitForTimeExpire",
+          "4": "WaitForDoor",
+          "5": "WaitForAnyEvent",
+          "6": "WaitForNextOrTime",
+          "7": "WaitForNextOrDoor",
+          "8": "WaitForTimeOrDoor",
+          "9": "WaitForAllEvents",
+          "10": "WaitForNextAndTime",
+          "11": "WaitForTimeAndDoor"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_DisplaySetEmbeddedUserInstructId",
+        "Instance": "OvenUpperCavity_DisplaySet",
+        "AttributeName": "EmbeddedUserInstructId",
+        "Key": "0x030E000F",
+        "MappedAttributeName": "OvenUpperCavity_DisplaySetEmbeddedUserInstructId",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpSetCookTimeCompleteAction",
+        "Instance": "OvenUpperCavity_OpSet",
+        "AttributeName": "CookTimeCompleteAction",
+        "Key": "0x030F0001",
+        "MappedAttributeName": "OvenUpperCavity_OpSetCookTimeCompleteAction",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Unset",
+          "1": "StayOn",
+          "2": "KeepWarm",
+          "3": "TurnOff",
+          "4": "ProcessCmpltActionAutoAdvance",
+          "5": "ProcessCmpltActionWaitForNextCommand",
+          "6": "ProcessCmpltActionWaitForTimeExpire",
+          "7": "ProcessCmpltActionWaitForDoor",
+          "8": "ProcessCmpltActionWaitForEvent"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpSetOperations",
+        "Instance": "OvenUpperCavity_OpSet",
+        "AttributeName": "Operations",
+        "Key": "0x030F0002",
+        "MappedAttributeName": "OvenUpperCavity_OpSetOperations",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "None",
+          "1": "Cancel",
+          "2": "Start",
+          "3": "SetOnDisplay",
+          "4": "Modify",
+          "6": "Continue"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpSetSabbathModeActive",
+        "Instance": "OvenUpperCavity_OpSet",
+        "AttributeName": "SabbathModeActive",
+        "Key": "0x030F0003",
+        "MappedAttributeName": "OvenUpperCavity_OpSetSabbathModeActive",
+        "DataType": "Boolean",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_OpSetMachineInstructCmpltAction",
+        "Instance": "OvenUpperCavity_OpSet",
+        "AttributeName": "MachineInstructCmpltAction",
+        "Key": "0x030F0004",
+        "MappedAttributeName": "OvenUpperCavity_OpSetMachineInstructCmpltAction",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Unset",
+          "1": "AutoAdvance",
+          "2": "WaitForNextCmd",
+          "3": "WaitForTimeExpire",
+          "4": "WaitForDoor",
+          "5": "WaitForAnyEvent",
+          "6": "WaitForNextOrTime",
+          "7": "WaitForNextOrDoor",
+          "8": "WaitForTimeOrDoor",
+          "9": "WaitForAllEvents",
+          "10": "WaitForNextAndTime",
+          "11": "WaitForTimeAndDoor"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CycleSetTargetTemp",
+        "Instance": "OvenUpperCavity_CycleSet",
+        "AttributeName": "TargetTemp",
+        "Key": "0x03100001",
+        "MappedAttributeName": "OvenUpperCavity_CycleSetTargetTemp",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CycleSetCommonMode",
+        "Instance": "OvenUpperCavity_CycleSet",
+        "AttributeName": "CommonMode",
+        "Key": "0x0310000C",
+        "MappedAttributeName": "OvenUpperCavity_CycleSetCommonMode",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "CommonModeIdle",
+          "2": "CommonModeBake",
+          "5": "CommonModeSabbathBake",
+          "8": "CommonModeBroil",
+          "24": "CommonModeKeepWarm"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CycleSetFrozenBakeFood",
+        "Instance": "OvenUpperCavity_CycleSet",
+        "AttributeName": "FrozenBakeFood",
+        "Key": "0x03100012",
+        "MappedAttributeName": "OvenUpperCavity_CycleSetFrozenBakeFood",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "FrozenBakeFoodIdle",
+          "2": "FrozenBakeFoodMeals",
+          "3": "FrozenBakeFoodNuggets",
+          "4": "FrozenBakeFoodLasagna",
+          "5": "FrozenBakeFoodPizza",
+          "6": "FrozenBakeFoodPie",
+          "7": "FrozenBakeFoodFries"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CycleSetCleanOvenMode",
+        "Instance": "OvenUpperCavity_CycleSet",
+        "AttributeName": "CleanOvenMode",
+        "Key": "0x03100018",
+        "MappedAttributeName": "OvenUpperCavity_CycleSetCleanOvenMode",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "CleanOvenIdle",
+          "1": "CleanOvenStandard",
+          "2": "CleanOvenMid",
+          "3": "CleanOvenLow",
+          "7": "CleanOvenSteam"
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CustomCycleSetId",
+        "Instance": "OvenUpperCavity_CustomCycleSet",
+        "AttributeName": "Id",
+        "Key": "0x03170001",
+        "MappedAttributeName": "OvenUpperCavity_CustomCycleSetId",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_CustomCycleSetStep",
+        "Instance": "OvenUpperCavity_CustomCycleSet",
+        "AttributeName": "Step",
+        "Key": "0x03170002",
+        "MappedAttributeName": "OvenUpperCavity_CustomCycleSetStep",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_AlertSetToneSelect",
+        "Instance": "OvenUpperCavity_AlertSet",
+        "AttributeName": "ToneSelect",
+        "Key": "0x03190001",
+        "MappedAttributeName": "OvenUpperCavity_AlertSetToneSelect",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity_AlertSetUserInstructToneSelect",
+        "Instance": "OvenUpperCavity_AlertSet",
+        "AttributeName": "UserInstructToneSelect",
+        "Key": "0x03190002",
+        "MappedAttributeName": "OvenUpperCavity_AlertSetUserInstructToneSelect",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity__RecipeSetFacadeMode",
+        "Instance": "OvenUpperCavity__RecipeSet",
+        "AttributeName": "FacadeMode",
+        "Key": "0x031B0001",
+        "MappedAttributeName": "OvenUpperCavity__RecipeSetFacadeMode",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity__RecipeSetFacadeCookTime",
+        "Instance": "OvenUpperCavity__RecipeSet",
+        "AttributeName": "FacadeCookTime",
+        "Key": "0x031B0002",
+        "MappedAttributeName": "OvenUpperCavity__RecipeSetFacadeCookTime",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "OvenUpperCavity__RecipeSetFacadeDisplayTemp",
+        "Instance": "OvenUpperCavity__RecipeSet",
+        "AttributeName": "FacadeDisplayTemp",
+        "Key": "0x031B0003",
+        "MappedAttributeName": "OvenUpperCavity__RecipeSetFacadeDisplayTemp",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "KitchenTimer01_StatusState",
+        "Instance": "KitchenTimer01_Status",
+        "AttributeName": "State",
+        "Key": "0x08010001",
+        "MappedAttributeName": "KitchenTimer01_StatusState",
+        "DataType": "enum",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "Idle",
+          "1": "Running",
+          "3": "Completed"
+        }
+      },
+      {
+        "M2MAttributeName": "KitchenTimer01_StatusTimeRemaining",
+        "Instance": "KitchenTimer01_Status",
+        "AttributeName": "TimeRemaining",
+        "Key": "0x08010002",
+        "MappedAttributeName": "KitchenTimer01_StatusTimeRemaining",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 86400,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "KitchenTimer01_SetTimeSet",
+        "Instance": "KitchenTimer01_Set",
+        "AttributeName": "TimeSet",
+        "Key": "0x08050001",
+        "MappedAttributeName": "KitchenTimer01_SetTimeSet",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 1,
+          "Max": 86400,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "KitchenTimer01_SetOperations",
+        "Instance": "KitchenTimer01_Set",
+        "AttributeName": "Operations",
+        "Key": "0x08050002",
+        "MappedAttributeName": "KitchenTimer01_SetOperations",
+        "DataType": "enum",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "0": "None",
+          "1": "Cancel",
+          "2": "Start"
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_CycleMyCreation",
+        "Instance": "Relational_Cycle",
+        "AttributeName": "MyCreation",
+        "Key": "0xFD020001",
+        "MappedAttributeName": "Relational_CycleMyCreation",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "Relational_EnvelopeOpen",
+        "Instance": "Relational_Envelope",
+        "AttributeName": "Open",
+        "Key": "0xFE010001",
+        "MappedAttributeName": "Relational_EnvelopeOpen",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_EnvelopeClose",
+        "Instance": "Relational_Envelope",
+        "AttributeName": "Close",
+        "Key": "0xFE010002",
+        "MappedAttributeName": "Relational_EnvelopeClose",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_EnvelopeAction",
+        "Instance": "Relational_Envelope",
+        "AttributeName": "Action",
+        "Key": "0xFE010003",
+        "MappedAttributeName": "Relational_EnvelopeAction",
+        "DataType": "enum",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0",
+        "EnumValues": {
+          "5": "Start",
+          "6": "SetOnDisplay"
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_EntityOpen",
+        "Instance": "Relational_Entity",
+        "AttributeName": "Open",
+        "Key": "0xFE020001",
+        "MappedAttributeName": "Relational_EntityOpen",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_EntityClose",
+        "Instance": "Relational_Entity",
+        "AttributeName": "Close",
+        "Key": "0xFE020002",
+        "MappedAttributeName": "Relational_EntityClose",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_EntityName",
+        "Instance": "Relational_Entity",
+        "AttributeName": "Name",
+        "Key": "0xFE020003",
+        "MappedAttributeName": "Relational_EntityName",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "Relational_EntityId",
+        "Instance": "Relational_Entity",
+        "AttributeName": "Id",
+        "Key": "0xFE020004",
+        "MappedAttributeName": "Relational_EntityId",
+        "DataType": "IntegerUnsigned8Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 255,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_ArrayOpen",
+        "Instance": "Relational_Array",
+        "AttributeName": "Open",
+        "Key": "0xFE030001",
+        "MappedAttributeName": "Relational_ArrayOpen",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_ArrayClose",
+        "Instance": "Relational_Array",
+        "AttributeName": "Close",
+        "Key": "0xFE030002",
+        "MappedAttributeName": "Relational_ArrayClose",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Relational_to_Appliance",
+        "Instance": "",
+        "AttributeName": "Relational_to_Appliance",
+        "Key": "0x00000000",
+        "MappedAttributeName": "Relational_to_Appliance",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "M2MSubList",
+        "Instance": "",
+        "AttributeName": "M2MSubList",
+        "Key": "0x00000000",
+        "MappedAttributeName": "M2MSubList",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "ApplianceVersionNumber",
+        "Instance": "",
+        "AttributeName": "ApplianceVersionNumber",
+        "Key": "0x00000000",
+        "MappedAttributeName": "ApplianceVersionNumber",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "EnergyProfileSetting",
+        "Instance": "",
+        "AttributeName": "EnergyProfileSetting",
+        "Key": "0x00000000",
+        "MappedAttributeName": "EnergyProfileSetting",
+        "DataType": "BEIntegerUnsigned32Bit",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 4294967295,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "ISPBundleAttributes",
+        "Instance": "",
+        "AttributeName": "ISPBundleAttributes",
+        "Key": "0x00000000",
+        "MappedAttributeName": "ISPBundleAttributes",
+        "DataType": "String",
+        "DeviceIO": "WO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "RatePlanID",
+        "Instance": "",
+        "AttributeName": "RatePlanID",
+        "Key": "0x00000000",
+        "MappedAttributeName": "RatePlanID",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "UtilityID",
+        "Instance": "",
+        "AttributeName": "UtilityID",
+        "Key": "0x00000000",
+        "MappedAttributeName": "UtilityID",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "trid",
+        "Instance": "",
+        "AttributeName": "trid",
+        "Key": "0x00000000",
+        "MappedAttributeName": "trid",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "Online",
+        "Instance": "",
+        "AttributeName": "Online",
+        "Key": "0x00000000",
+        "MappedAttributeName": "Online",
+        "DataType": "Boolean",
+        "DeviceIO": "RO",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": false
+      },
+      {
+        "M2MAttributeName": "UtcOffset",
+        "Instance": "",
+        "AttributeName": "UtcOffset",
+        "Key": "0x00000000",
+        "MappedAttributeName": "UtcOffset",
+        "DataType": "BEIntegerSigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": -2147483648,
+          "Max": 2147483647,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "DstOffset",
+        "Instance": "",
+        "AttributeName": "DstOffset",
+        "Key": "0x00000000",
+        "MappedAttributeName": "DstOffset",
+        "DataType": "BEIntegerSigned32Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": -2147483648,
+          "Max": 2147483647,
+          "StepSize": 1
+        }
+      },
+      {
+        "M2MAttributeName": "TimeZoneId",
+        "Instance": "",
+        "AttributeName": "TimeZoneId",
+        "Key": "0x00000000",
+        "MappedAttributeName": "TimeZoneId",
+        "DataType": "String",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": "0"
+      },
+      {
+        "M2MAttributeName": "DateTimeMode",
+        "Instance": "",
+        "AttributeName": "DateTimeMode",
+        "Key": "0x00000000",
+        "MappedAttributeName": "DateTimeMode",
+        "DataType": "BEIntegerUnsigned16Bit",
+        "DeviceIO": "RW",
+        "IsTimeSeries": false,
+        "IsTemplate": false,
+        "Default": 0,
+        "RangeValues": {
+          "Min": 0,
+          "Max": 65535,
+          "StepSize": 1
+        }
+      }
+    ],
+    "id": "DDM_COOKING_MINERVA_SINGLE_BIO5_V2"
+  },
+  "personality": {
+    "capability": [
+      {
+        "Capability": {
+          "OvenUpperCavity": {
+            "SetCycle": {
+              "homeManualOven": {
+                "OvenUpperCavity_CycleSetCommonModeCommonModeBroil": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetCommonMode": [
+                      "CommonModeBroil"
+                    ]
+                  },
+                  "Name": "modeBroil"
+                },
+                "OvenUpperCavity_CycleSetCommonModeCommonModeKeepWarm": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetCommonMode": [
+                      "CommonModeKeepWarm"
+                    ]
+                  },
+                  "Name": "modeKeepWarm"
+                },
+                "OvenUpperCavity_CycleSetCommonModeCommonModeBake": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetCommonMode": [
+                      "CommonModeBake"
+                    ]
+                  },
+                  "Name": "modeBake"
+                }
+              },
+              "Default": "OvenUpperCavity_CycleSetCommonModeCommonModeBake",
+              "homeAutomaticOven": {
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPizza": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodPizza"
+                    ]
+                  },
+                  "Name": "foodFrozenPizza"
+                },
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPie": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodPie"
+                    ]
+                  },
+                  "Name": "foodFrozenPie"
+                },
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodNuggets": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodNuggets"
+                    ]
+                  },
+                  "Name": "foodFrozenNuggets"
+                },
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodMeals": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodMeals"
+                    ]
+                  },
+                  "Name": "foodFrozenMeals"
+                },
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodLasagna": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodLasagna"
+                    ]
+                  },
+                  "Name": "foodFrozenLasagna"
+                },
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodFries": {
+                  "Attributes": {
+                    "OvenUpperCavity_CycleSetFrozenBakeFood": [
+                      "FrozenBakeFoodFries"
+                    ]
+                  },
+                  "Name": "foodFrozenFries"
+                }
+              }
+            },
+            "CapabilityData": {
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodTurkeyWhole": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodFishFillet": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1627
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodBiscuits": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodFreshPie": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodLambOnlyTimer": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodPorkOnlyTimer": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodBeefOnlyTimer": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodChickenPieces": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeKeepWarm": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 655,
+                      "Max": 877,
+                      "StepF": 5,
+                      "Default": 766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodBakedPotato": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodFries": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 2044
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 600,
+                      "Step": 60,
+                      "Max": 10800,
+                      "Default": 600
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeConvectRoast": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2877,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodSnacks": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPizza": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 2044
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 600,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 600
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodCroissants": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeConvectBroil": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 2322,
+                      "Max": 2877,
+                      "StepF": 5,
+                      "Default": 2877
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodChickenWhole": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeConvectBake": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2877,
+                      "StepF": 5,
+                      "Default": 1627
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodPizza": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 2044
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodCakes": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodMeatLoaf": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPie": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 2044
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 600,
+                      "Step": 60,
+                      "Max": 10800,
+                      "Default": 600
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeBroil": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 2322,
+                      "Max": 2877,
+                      "StepF": 5,
+                      "Default": 2877
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodMeals": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 1200,
+                      "Step": 60,
+                      "Max": 10800,
+                      "Default": 1200
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodFishSticks": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodLasagna": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 1200,
+                      "Step": 60,
+                      "Max": 10800,
+                      "Default": 1200
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodOtherVeggies": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodCookies": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetEasyConvectFoodEasyConvectFoodCasserole": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 60,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 60
+                    }
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodNuggets": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2600,
+                      "StepF": 5,
+                      "Default": 2044
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 600,
+                      "Step": 60,
+                      "Max": 3600,
+                      "Default": 600
+                    }
+                  }
+                },
+                "Optional": {},
+                "Notification": {}
+              },
+              "OvenUpperCavity_CycleSetCommonModeCommonModeBake": {
+                "Accessories": [],
+                "Verification": {},
+                "Required": {
+                  "OvenUpperCavity_CycleSetTargetTemp": {
+                    "TempRange": {
+                      "StepC": 5,
+                      "Min": 794,
+                      "Max": 2877,
+                      "StepF": 5,
+                      "Default": 1766
+                    }
+                  },
+                  "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+                    "Default": "TurnOff",
+                    "Enumeration": [
+                      "KeepWarm",
+                      "StayOn",
+                      "TurnOff"
+                    ]
+                  }
+                },
+                "Optional": {
+                  "OvenUpperCavity_TimeSetDelayTime": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  },
+                  "OvenUpperCavity_TimeSetCookTimeSet": {
+                    "Range": {
+                      "Min": 0,
+                      "Step": 60,
+                      "Max": 43140,
+                      "Default": 0
+                    }
+                  }
+                },
+                "Notification": {}
+              }
+            }
+          }
+        },
+        "AttributesMapping": {
+          "OvenUpperCavity": {
+            "DoorOpen": "OvenUpperCavity_OpStatusDoorOpen",
+            "CookTimeCompleteAction": "OvenUpperCavity_OpSetCookTimeCompleteAction",
+            "CavityLight": "OvenUpperCavity_DisplaySetLightOn",
+            "DelayTimeRemaining": "OvenUpperCavity_TimeStatusDelayTimeRemaining",
+            "CavityActualTemp": "OvenUpperCavity_DisplStatusDisplayTemp",
+            "TimeElapsed": "OvenUpperCavity_TimeStatusCycleTimeElapsed",
+            "CavityTargetTemp": "OvenUpperCavity_CycleSetTargetTemp",
+            "CookTimeRemaining": "OvenUpperCavity_TimeStatusCookTimeRemaining",
+            "DisplaySetZonedMessage": "OvenUpperCavity_DisplaySetZonedMessage",
+            "CycleName": [
+              "OvenUpperCavity_CycleSetCommonMode",
+              "OvenUpperCavity_CycleSetFrozenBakeFood"
+            ],
+            "CookTimeSetTime": "OvenUpperCavity_TimeSetCookTimeSet",
+            "CavityOperations": "OvenUpperCavity_OpSetOperations",
+            "CustomCycleStep": "OvenUpperCavity_CustomCycleSetStep",
+            "DelayTimeSetTime": "OvenUpperCavity_TimeSetDelayTime",
+            "CustomCycleSetId": "OvenUpperCavity_CustomCycleSetId",
+            "OpStatusState": "OvenUpperCavity_OpStatusState",
+            "DoorLockStatus": "OvenUpperCavity_OpStatusDoorLocked",
+            "SabbathModeEnabled": "Sys_OperationSetSabbathModeEnabled",
+            "SabbathModeActive": "OvenUpperCavity_OpSetSabbathModeActive",
+            "CookTimerState": "OvenUpperCavity_OpStatusCookTimeState"
+          },
+          "Common": {
+            "QuietMode": "Sys_OperationSetQuietModeEnabled",
+            "ControlLock": "Sys_OperationSetControlLock",
+            "DisplayLanguage": "Sys_DisplaySetLanguage",
+            "TempDisplayUnits": "Sys_DisplaySetTempUnits",
+            "SoundKeyPress": "Sys_OperationSetKeyPressToneVolume",
+            "RemoteEnabledStatus": "XCat_RemoteSetRemoteControlEnable"
+          }
+        },
+        "CycleOrder": {
+          "OvenUpperCavity": [
+            "homeManualOven",
+            "OvenUpperCavity_CycleSetCommonModeCommonModeBake",
+            "OvenUpperCavity_CycleSetCommonModeCommonModeBroil",
+            "OvenUpperCavity_CycleSetCommonModeCommonModeKeepWarm",
+            "homeAutomaticOven",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodFries",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodLasagna",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodMeals",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodNuggets",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPie",
+            "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPizza"
+          ]
+        },
+        "CavityOrder": [
+          "OvenUpperCavity"
+        ],
+        "Features": {
+          "OvenUpperCavity": {
+            "CycleShortcuts": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA",
+                "MX",
+                "CO",
+                "PA",
+                "CR",
+                "GT"
+              ]
+            },
+            "CyclesHistory": {
+              "Visible": true,
+              "SendCommandAttributes": [
+                "OvenUpperCavity_CycleSetCommonMode",
+                "OvenUpperCavity_CycleSetFrozenBakeFood",
+                "OvenUpperCavity_CycleSetTargetTemp",
+                "OvenUpperCavity_TimeSetDelayTime",
+                "OvenUpperCavity_TimeSetCookTimeSet",
+                "OvenUpperCavity_OpSetCookTimeCompleteAction",
+                "OvenUpperCavity_OpSetOperations"
+              ],
+              "StateAttributes": {},
+              "SetOperationsMapping": {
+                "EnvelopeAction": "Relational_EnvelopeAction",
+                "CookTime": "OvenUpperCavity_TimeSetCookTimeSet",
+                "Operation": "OvenUpperCavity_OpSetOperations",
+                "CookTemp": "OvenUpperCavity_CycleSetTargetTemp"
+              },
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "LightOnOff": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "OvenUpperCavity_DisplaySetLightOn"
+              }
+            },
+            "SetOven": {
+              "Visible": true,
+              "SendCommandAttributes": [
+                "OvenUpperCavity_CycleSetCommonMode",
+                "OvenUpperCavity_CycleSetFrozenBakeFood",
+                "OvenUpperCavity_CycleSetTargetTemp",
+                "OvenUpperCavity_TimeSetDelayTime",
+                "OvenUpperCavity_TimeSetCookTimeSet",
+                "OvenUpperCavity_OpSetCookTimeCompleteAction",
+                "OvenUpperCavity_OpSetOperations"
+              ],
+              "StateAttributes": {
+                "OpStatusState": "OvenUpperCavity_OpStatusState"
+              },
+              "StatusAttributes": [
+                "OvenUpperCavity_CycleSetCommonMode",
+                "OvenUpperCavity_CycleSetFrozenBakeFood",
+                "OvenUpperCavity_CycleSetTargetTemp",
+                "OvenUpperCavity_TimeStatusDelayTimeRemaining",
+                "OvenUpperCavity_TimeStatusCookTimeRemaining",
+                "OvenUpperCavity_OpStatusState",
+                "OvenUpperCavity_TimeSetCookTimeSet",
+                "OvenUpperCavity_TimeSetDelayTime",
+                "OvenUpperCavity_DisplStatusDisplayTemp"
+              ],
+              "SetOperationsMapping": {
+                "EnvelopeAction": "Relational_EnvelopeAction",
+                "CookTime": "OvenUpperCavity_TimeSetCookTimeSet",
+                "Operation": "OvenUpperCavity_OpSetOperations",
+                "CookTemp": "OvenUpperCavity_CycleSetTargetTemp"
+              },
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "FavoriteCycles": {
+              "ReadOnly": false,
+              "StatusAttributes": [],
+              "Visible": true,
+              "SendCommandAttributes": [
+                "OvenUpperCavity_CycleSetCommonMode",
+                "OvenUpperCavity_CycleSetFrozenBakeFood",
+                "OvenUpperCavity_CycleSetTargetTemp",
+                "OvenUpperCavity_TimeSetDelayTime",
+                "OvenUpperCavity_TimeSetCookTimeSet",
+                "OvenUpperCavity_OpSetCookTimeCompleteAction",
+                "OvenUpperCavity_OpSetOperations"
+              ],
+              "StateAttributes": {},
+              "SetOperationsMapping": {
+                "EnvelopeAction": "Relational_EnvelopeAction",
+                "CookTime": "OvenUpperCavity_TimeSetCookTimeSet",
+                "Operation": "OvenUpperCavity_OpSetOperations",
+                "CookTemp": "OvenUpperCavity_CycleSetTargetTemp"
+              },
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            }
+          },
+          "Common": {
+            "ControlLock": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_OperationSetControlLock"
+              }
+            },
+            "ApplianceDocuments": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "CareTips": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "ChangeApplianceLanguage": {
+              "Visible": false,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_DisplaySetLanguage"
+              }
+            },
+            "BuySupplies": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "FaultCodes": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "ChangeSoundKeyPress": {
+              "Visible": false,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_OperationSetKeyPressToneVolume"
+              }
+            },
+            "QuietMode": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_OperationSetQuietModeEnabled"
+              }
+            },
+            "DateAndTime": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA",
+                "MX",
+                "CO",
+                "PA",
+                "CR",
+                "GT",
+                "DO"
+              ]
+            },
+            "Scan2Cook": {
+              "Visible": true,
+              "SendCommandAttributes": [],
+              "SetOperationsMapping": {
+                "EnvelopeAction": "Relational_EnvelopeAction"
+              },
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "KitchenTimer": {
+              "Visible": true,
+              "SendCommandAttributes": [
+                "KitchenTimer01_SetTimeSet",
+                "KitchenTimer01_SetOperations"
+              ],
+              "StateAttributes": {
+                "State": "KitchenTimer01_StatusState"
+              },
+              "StatusAttributes": [
+                "KitchenTimer01_StatusTimeRemaining"
+              ],
+              "SetOperationsMapping": {
+                "Operation": "KitchenTimer01_SetOperations"
+              },
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "Recipe2Cook": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "Highlighted": true
+            },
+            "ChangeBrightness": {
+              "Visible": false,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_DisplaySetBrightnessPercent"
+              }
+            },
+            "ExtendedServicePlans": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            },
+            "ChangeTempUnits": {
+              "Visible": false,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ],
+              "StateAttributes": {
+                "State": "Sys_DisplaySetTempUnits"
+              }
+            },
+            "Notifications": {
+              "Visible": true,
+              "AvailableIn": [
+                "US",
+                "CA"
+              ]
+            }
+          }
+        },
+        "QueryParams": {
+          "OvenUpperCavity": {
+            "CycleHistory": {
+              "isLegacy": false,
+              "attributes": "OvenUpperCavity_CycleSetCommonMode,OvenUpperCavity_CycleSetFrozenBakeFood,OvenUpperCavity_OpSetOperations,OvenUpperCavity_CycleSetTargetTemp,OvenUpperCavity_TimeSetCookTimeSet",
+              "groupBy": "OvenUpperCavity_OpSetOperations"
+            }
+          },
+          "Common": {
+            "FaultCodeHistory": {
+              "isLegacy": false,
+              "attributes": "Sys_AlertStatusCustomerFaultCode",
+              "groupBy": "Sys_AlertStatusCustomerFaultCode"
+            }
+          }
+        },
+        "RelationalHexConversion": {
+          "EncodingVersion": 1
+        },
+        "Compatibility": {
+          "MultipliedByTen": true,
+          "TempExchangeUnits": "C",
+          "Scan2Cook": {
+            "CavityMapping": {
+              "OvenUpperCavity": "Oven"
+            },
+            "AttributesMapping": {
+              "OvenUpperCavity": {
+                "ConfigTime_SetCookTimeMin": "OvenUpperCavity_TimeSetCookTimeSet",
+                "ConfigCavity_SetTempDefault": "OvenUpperCavity_CycleSetTargetTemp"
+              }
+            }
+          }
+        },
+        "ApplianceRulesets": {
+          "OvenUpperCavity": {
+            "Runtime": [
+              {
+                "ruleName": "Disable Delay Option if Running",
+                "description": "Disable Delay",
+                "attributes": {
+                  "OvenUpperCavity_TimeSetDelayTime": false
+                },
+                "condition": {
+                  "right": {
+                    "valueOperator": "in",
+                    "type": "value",
+                    "value": [
+                      1,
+                      2,
+                      5
+                    ],
+                    "key": "OvenUpperCavity_OpStatusState"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "OvenUpperCavity_OpStatusCookTimeState"
+                  },
+                  "binaryOperator": "or"
+                }
+              },
+              {
+                "ruleName": "To detect if Appliance is on Programming State",
+                "description": "To detect if Appliance is on Programming State",
+                "condition": {
+                  "right": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 3,
+                    "key": "OvenUpperCavity_OpStatusState"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 3,
+                    "key": "OvenUpperCavity_OpSetOperations"
+                  },
+                  "binaryOperator": "or"
+                },
+                "customTags": {
+                  "ProgrammingState": true
+                }
+              },
+              {
+                "ruleName": "To detect if Assisted cycles are running",
+                "description": "To detect if Assisted cycles are running",
+                "condition": {
+                  "valueOperator": "!=",
+                  "type": "value",
+                  "value": 0,
+                  "key": "OvenUpperCavity_CycleSetFrozenBakeFood"
+                },
+                "customTags": {
+                  "AssistedCycleIsRunning": true
+                }
+              },
+              {
+                "ruleName": "Disable All Features When Control Lock is On",
+                "description": "Disable All Features",
+                "features": {
+                  "QuietMode": true,
+                  "DateAndTime": true,
+                  "LightOnOff": true,
+                  "SetOven": true,
+                  "KitchenTimer": true
+                },
+                "condition": {
+                  "errorMessage": "error.error_code.control_lock_on",
+                  "valueOperator": "=",
+                  "type": "value",
+                  "value": 0,
+                  "key": "Sys_OperationSetControlLock"
+                },
+                "actions": {
+                  "ActionSetCycleSendCommand": true,
+                  "ActionSetCycleStartCommand": true,
+                  "ActionScan2CookStartCommand": true,
+                  "ActionScan2CookSetOnDisplayCommand": true,
+                  "ActionSetCycleCancelCommand": true
+                }
+              },
+              {
+                "ruleName": "Disable All Features When Appliance is Offline",
+                "description": "Disable Features When Offline",
+                "features": {
+                  "LightOnOff": false,
+                  "SetOven": false,
+                  "DateAndTime": false
+                },
+                "condition": {
+                  "valueOperator": "=",
+                  "type": "value",
+                  "value": 0,
+                  "key": "Online"
+                },
+                "actions": {
+                  "ActionSetCycleSendCommand": false,
+                  "ActionSetCycleStartCommand": false,
+                  "ActionSetCycleModifyCommand": false,
+                  "ActionSetCycleCancelCommand": false
+                }
+              },
+              {
+                "ruleName": "Enable Cancel Button When the Machine is not IDLE",
+                "description": "Enable Cancel Button",
+                "condition": {
+                  "right": {
+                    "right": {
+                      "valueOperator": "in",
+                      "type": "value",
+                      "value": [
+                        1,
+                        2,
+                        3,
+                        4
+                      ],
+                      "key": "OvenUpperCavity_OpStatusState"
+                    },
+                    "type": "operation",
+                    "left": {
+                      "valueOperator": "=",
+                      "type": "value",
+                      "value": 3,
+                      "key": "OvenUpperCavity_OpSetOperations"
+                    },
+                    "binaryOperator": "or"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "OvenUpperCavity_OpStatusCookTimeState"
+                  },
+                  "binaryOperator": "or"
+                },
+                "actions": {
+                  "ActionSetCycleCancelCommand": true
+                }
+              },
+              {
+                "ruleName": "Enable Start Button If Appliance is in IDLE and Remote Enabled",
+                "description": "Enable Start Button",
+                "condition": {
+                  "right": {
+                    "valueOperator": "in",
+                    "type": "value",
+                    "value": [
+                      0,
+                      3
+                    ],
+                    "key": "OvenUpperCavity_OpStatusState"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "XCat_RemoteSetRemoteControlEnable"
+                  },
+                  "binaryOperator": "and"
+                },
+                "actions": {
+                  "ActionSetCycleStartCommand": true
+                }
+              },
+              {
+                "ruleName": "Enable Send to appliance if Remote Control is Disabled",
+                "description": "Enable Send to Appliance",
+                "condition": {
+                  "right": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 0,
+                    "key": "OvenUpperCavity_OpStatusState"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 0,
+                    "key": "XCat_RemoteSetRemoteControlEnable"
+                  },
+                  "binaryOperator": "and"
+                },
+                "actions": {
+                  "ActionSetCycleSendCommand": true
+                }
+              },
+              {
+                "ruleName": "Enable Modify Button When Running",
+                "description": "Enable Modify",
+                "attributes": {
+                  "OvenUpperCavity_CycleSetCommonMode": false,
+                  "OvenUpperCavity_CycleSetFrozenBakeFood": false
+                },
+                "condition": {
+                  "right": {
+                    "right": {
+                      "valueOperator": "=",
+                      "type": "value",
+                      "value": 1,
+                      "key": "OvenUpperCavity_OpStatusCookTimeState"
+                    },
+                    "type": "operation",
+                    "left": {
+                      "valueOperator": "in",
+                      "type": "value",
+                      "value": [
+                        1,
+                        2,
+                        4
+                      ],
+                      "key": "OvenUpperCavity_OpStatusState"
+                    },
+                    "binaryOperator": "or"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "XCat_RemoteSetRemoteControlEnable"
+                  },
+                  "binaryOperator": "and"
+                },
+                "actions": {
+                  "ActionSetCycleModifyCommand": true
+                }
+              },
+              {
+                "ruleName": "Disable Modify Button for Frozen and Recipe Cycles",
+                "description": "Disable Modify",
+                "attributes": {
+                  "OvenUpperCavity_CycleSetCommonMode": false,
+                  "OvenUpperCavity_CycleSetFrozenBakeFood": false
+                },
+                "condition": {
+                  "right": {
+                    "right": {
+                      "valueOperator": "!=",
+                      "type": "value",
+                      "value": 0,
+                      "key": "OvenUpperCavity_CustomCycleSetId"
+                    },
+                    "type": "operation",
+                    "left": {
+                      "valueOperator": "!=",
+                      "type": "value",
+                      "value": 0,
+                      "key": "OvenUpperCavity_CycleSetFrozenBakeFood"
+                    },
+                    "binaryOperator": "or"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "XCat_RemoteSetRemoteControlEnable"
+                  },
+                  "binaryOperator": "and"
+                },
+                "actions": {
+                  "ActionSetCycleModifyCommand": false
+                }
+              }
+            ],
+            "UserSelection": [
+              {
+                "ruleName": "Disable Start and Send When the Cooktime=0 and DelayTime is > 0",
+                "description": "Delay is Not allowed for Untimed CYcle",
+                "condition": {
+                  "right": {
+                    "valueOperator": ">",
+                    "type": "value",
+                    "value": 0,
+                    "key": "OvenUpperCavity_TimeSetDelayTime"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 0,
+                    "key": "OvenUpperCavity_TimeSetCookTimeSet"
+                  },
+                  "binaryOperator": "and"
+                },
+                "actions": {
+                  "ActionSetCycleSendCommand": false,
+                  "ActionSetCycleStartCommand": false
+                }
+              }
+            ]
+          },
+          "Common": {
+            "Runtime": [
+              {
+                "ruleName": "Disable All Features When Control Lock is On",
+                "description": "Disable All Features",
+                "features": {
+                  "QuietMode": true,
+                  "DateAndTime": true,
+                  "LightOnOff": true,
+                  "SetOven": true,
+                  "KitchenTimer": true
+                },
+                "condition": {
+                  "errorMessage": "error.error_code.control_lock_on",
+                  "valueOperator": "=",
+                  "type": "value",
+                  "value": 0,
+                  "key": "Sys_OperationSetControlLock"
+                },
+                "actions": {
+                  "ActionKitchenTimerCancel": true,
+                  "ActionScan2CookStartCommand": true,
+                  "ActionKitchenTimerModify": true,
+                  "ActionKitchenTimerStart": true,
+                  "ActionScan2CookSetOnDisplayCommand": true,
+                  "ActionSetCycleSendCommand": true,
+                  "ActionSetCycleStartCommand": true,
+                  "ActionSetCycleCancelCommand": true
+                }
+              },
+              {
+                "ruleName": "Disable All Features When Appliance is Offline",
+                "description": "Disable Features When Offline",
+                "features": {
+                  "QuietMode": false,
+                  "DateAndTime": false,
+                  "LightOnOff": false,
+                  "KitchenTimer": false
+                },
+                "condition": {
+                  "valueOperator": "=",
+                  "type": "value",
+                  "value": 0,
+                  "key": "Online"
+                },
+                "actions": {
+                  "ActionKitchenTimerCancel": false,
+                  "ActionScan2CookStartCommand": false,
+                  "ActionKitchenTimerModify": false,
+                  "ActionKitchenTimerStart": false,
+                  "ActionScan2CookSetOnDisplayCommand": false,
+                  "ActionSetCycleSendCommand": false,
+                  "ActionSetCycleStartCommand": false,
+                  "ActionSetCycleCancelCommand": false
+                }
+              },
+              {
+                "ruleName": "Disable Control Lock When Machine is Not in IDLE",
+                "description": "Disable Control Lock",
+                "features": {
+                  "ControlLock": false
+                },
+                "condition": {
+                  "right": {
+                    "right": {
+                      "valueOperator": "=",
+                      "type": "value",
+                      "value": 1,
+                      "key": "OvenUpperCavity_OpStatusCookTimeState"
+                    },
+                    "type": "operation",
+                    "left": {
+                      "valueOperator": "in",
+                      "type": "value",
+                      "value": [
+                        1,
+                        2,
+                        4
+                      ],
+                      "key": "OvenUpperCavity_OpStatusState"
+                    },
+                    "binaryOperator": "or"
+                  },
+                  "type": "operation",
+                  "left": {
+                    "valueOperator": "=",
+                    "type": "value",
+                    "value": 1,
+                    "key": "XCat_RemoteSetRemoteControlEnable"
+                  },
+                  "binaryOperator": "and"
+                }
+              },
+              {
+                "ruleName": "Enable the Kitchen timer update option when Kitchen Timer is running on Appliance",
+                "description": "Enable Update Kitchen timer",
+                "condition": {
+                  "valueOperator": "=",
+                  "type": "value",
+                  "value": 1,
+                  "key": "KitchenTimer01_StatusState"
+                },
+                "actions": {
+                  "ActionKitchenTimerStart": false,
+                  "ActionKitchenTimerCancel": true,
+                  "ActionKitchenTimerModify": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "ruleSet": null,
+    "id": "DDM_COOKING_MINERVA_SINGLE_BIO5_V2",
+    "rev": null
+  },
+  "alerts": {
+    "_id": "**REDACTED**",
+    "alerts": [
+      {
+        "ApplianceAlerts": [
+          {
+            "alertId": 9,
+            "name": "PreHeatComplete",
+            "attribute": "Sys_AlertStatusNotification",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": true
+          },
+          {
+            "alertId": 10,
+            "name": "CookTimerComplete",
+            "attribute": "OvenUpperCavity_OpStatusCookTimeState",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": true
+          },
+          {
+            "alertId": 17,
+            "name": "KitchenTimerChange",
+            "attribute": "KitchenTimer01_SetTimeSet",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": false
+          },
+          {
+            "alertId": 576,
+            "name": "RemoteStatus",
+            "attribute": "XCat_RemoteSetRemoteControlEnable",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": false
+          },
+          {
+            "alertId": 656,
+            "name": "ControlStatus",
+            "attribute": "Sys_OperationSetControlLock",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": false
+          },
+          {
+            "alertId": 11,
+            "name": "CookTimerChange",
+            "attribute": "OvenUpperCavity_TimeSetCookTimeSet",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": false
+          },
+          {
+            "alertId": 16,
+            "name": "KitchenTimerComplete",
+            "attribute": "KitchenTimer01_StatusState",
+            "type": "push",
+            "category": "Cooking",
+            "autodelete": false,
+            "autodisarm": false,
+            "autodisable": false,
+            "visible": true,
+            "enable": true
+          }
+        ]
+      }
+    ]
+  },
+  "thirdParty": {
+    "_id": "**REDACTED**",
+    "thirdPartyServices": [
+      {
+        "name": "Replenishment",
+        "enabled": false,
+        "serviceProvider": [
+          {
+            "name": "ADRS",
+            "enabled": false,
+            "config": [],
+            "endPointKey": null
+          },
+          {
+            "name": "Wallmart",
+            "enabled": false,
+            "config": [],
+            "endPointKey": null
+          },
+          {
+            "name": "Whirlpool",
+            "enabled": false,
+            "config": [],
+            "endPointKey": null
+          }
+        ]
+      },
+      {
+        "name": "Thermostat",
+        "enabled": true,
+        "serviceProvider": [
+          {
+            "name": "Nest",
+            "enabled": true,
+            "config": [
+              {
+                "Key": "AwayOvenWarning",
+                "Type": "home_away",
+                "commandName": "",
+                "commandValue": ""
+              }
+            ],
+            "endPointKey": null
+          }
+        ]
+      },
+      {
+        "name": "Energy Management",
+        "enabled": false,
+        "serviceProvider": [
+          {
+            "name": "National Grid",
+            "enabled": false,
+            "config": [],
+            "endPointKey": null
+          },
+          {
+            "name": "Genability",
+            "enabled": false,
+            "config": [],
+            "endPointKey": null
+          }
+        ]
+      },
+      {
+        "name": "VoiceIntegration",
+        "enabled": true,
+        "serviceProvider": [
+          {
+            "name": "VoiceIntegration",
+            "enabled": true,
+            "config": null,
+            "endPointKey": null
+          },
+          {
+            "name": "GoogleSmartHome",
+            "enabled": true,
+            "config": {
+              "room": "",
+              "customData": {},
+              "devices": [
+                {
+                  "name": "Oven",
+                  "type": "action.devices.types.OVEN",
+                  "traits": [
+                    "action.devices.traits.OnOff",
+                    "action.devices.traits.TemperatureControl",
+                    "action.devices.traits.Modes",
+                    "action.devices.traits.StartStop",
+                    "action.devices.traits.Toggles",
+                    "action.devices.traits.Timer"
+                  ],
+                  "customData": {},
+                  "defaultData": {
+                    "pausable": false,
+                    "commandOnlyTimer": true,
+                    "maxTimerLimitSec": 43200,
+                    "temperatureRange": {
+                      "minThresholdCelsius": 65.5556,
+                      "maxThresholdCelsius": 287.778
+                    },
+                    "temperatureStepCelsius": 2.778,
+                    "temperatureUnitForUX": "F",
+                    "availableModes": [
+                      {
+                        "name": "mode",
+                        "name_values": [
+                          {
+                            "name_synonym": [
+                              "mode"
+                            ],
+                            "lang": "en"
+                          }
+                        ],
+                        "settings": [
+                          {
+                            "setting_name": "preheat",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "preheat"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          },
+                          {
+                            "setting_name": "Bake",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "bake"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          },
+                          {
+                            "setting_name": "Broil",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "broil"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          },
+                          {
+                            "setting_name": "Warm",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "warm"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          },
+                          {
+                            "setting_name": "Convection Bake",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "convect bake",
+                                  "convection bake"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          },
+                          {
+                            "setting_name": "Convection Roast",
+                            "setting_values": [
+                              {
+                                "setting_synonym": [
+                                  "convect roast",
+                                  "convection roast"
+                                ],
+                                "lang": "en"
+                              }
+                            ]
+                          }
+                        ],
+                        "ordered": false
+                      }
+                    ],
+                    "availableToggles": [
+                      {
+                        "name": "Light",
+                        "name_values": [
+                          {
+                            "name_synonym": [
+                              "light"
+                            ],
+                            "lang": "en"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "mapper": [
+                    {
+                      "operation": "shift",
+                      "spec": {
+                        "attributes": {
+                          "Online": {
+                            "value": {
+                              "0": {
+                                "#false": "online"
+                              },
+                              "1": {
+                                "#true": "online"
+                              }
+                            }
+                          },
+                          "OvenUpperCavity_OpSetOperations": {
+                            "value": {
+                              "0": {
+                                "#false": [
+                                  "on",
+                                  "isRunning",
+                                  "start"
+                                ]
+                              },
+                              "1": {
+                                "#false": [
+                                  "on",
+                                  "isRunning",
+                                  "start"
+                                ]
+                              },
+                              "2": {
+                                "#true": [
+                                  "on",
+                                  "isRunning",
+                                  "start"
+                                ]
+                              },
+                              "3": {
+                                "#true": [
+                                  "on",
+                                  "isRunning",
+                                  "start"
+                                ]
+                              },
+                              "4": {
+                                "#true": [
+                                  "on",
+                                  "isRunning",
+                                  "start"
+                                ]
+                              }
+                            }
+                          },
+                          "OvenUpperCavity_CycleSetTargetTemp": {
+                            "value": "temperatureSetpointCelsius"
+                          },
+                          "OvenUpperCavity_DisplaySetLightOn": {
+                            "value": {
+                              "0": {
+                                "#false": "currentToggleSettings.Light"
+                              },
+                              "1": {
+                                "#true": "currentToggleSettings.Light"
+                              }
+                            }
+                          },
+                          "OvenUpperCavity_DisplStatusDisplayTemp": {
+                            "value": "temperatureAmbientCelsius"
+                          },
+                          "OvenUpperCavity_CycleSetCommonMode": {
+                            "value": {
+                              "0": {
+                                "#None": "currentModeSettings.mode"
+                              },
+                              "2": {
+                                "#Bake": "currentModeSettings.mode"
+                              },
+                              "8": {
+                                "#Broil": "currentModeSettings.mode"
+                              },
+                              "Warm": {
+                                "#24": "OvenUpperCavity_CycleSetCommonMode"
+                              }
+                            }
+                          },
+                          "OvenUpperCavity_TimeStatusCookTimeRemaining": {
+                            "value": "timerRemainingSec"
+                          }
+                        },
+                        "on": {
+                          "false": {
+                            "#1": "OvenUpperCavity_OpSetOperations"
+                          },
+                          "true": {
+                            "#2": "OvenUpperCavity_OpSetOperations"
+                          }
+                        },
+                        "start": {
+                          "false": {
+                            "#1": "OvenUpperCavity_OpSetOperations"
+                          },
+                          "true": {
+                            "#2": "OvenUpperCavity_OpSetOperations"
+                          }
+                        },
+                        "temperatureAmbientCelsius": "OvenUpperCavity_DisplStatusDisplayTemp",
+                        "temperature": "OvenUpperCavity_CycleSetTargetTemp",
+                        "updateModeSettings": {
+                          "mode": {
+                            "preheat": {
+                              "#2": "OvenUpperCavity_CycleSetCommonMode"
+                            },
+                            "Bake": {
+                              "#2": "OvenUpperCavity_CycleSetCommonMode"
+                            },
+                            "Broil": {
+                              "#8": "OvenUpperCavity_CycleSetCommonMode"
+                            },
+                            "Warm": {
+                              "#24": "OvenUpperCavity_CycleSetCommonMode"
+                            }
+                          }
+                        },
+                        "updateToggleSettings": {
+                          "Light": {
+                            "true": {
+                              "#1": "OvenUpperCavity_DisplaySetLightOn"
+                            },
+                            "false": {
+                              "#0": "OvenUpperCavity_DisplaySetLightOn"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "operation": "modify-overwrite-beta",
+                      "spec": {
+                        "online": "=toBoolean",
+                        "on": "=toBoolean",
+                        "start": "=toBoolean",
+                        "isRunning": "=toBoolean",
+                        "temperatureSetpointCelsius": "=toDouble",
+                        "temperatureAmbientCelsius": "=toDouble",
+                        "timerRemainingSec": "=toInteger",
+                        "currentToggleSettings": {
+                          "*": "=toBoolean"
+                        }
+                      }
+                    },
+                    {
+                      "operation": "modify-overwrite-beta",
+                      "spec": {
+                        "XCat_PowerStatusRealTimePower": "=toInteger",
+                        "OvenUpperCavity_TimeSetCookTimeSet": "=toInteger",
+                        "OvenUpperCavity_CycleSetTargetTemp": "=toDouble",
+                        "OvenUpperCavity_DisplStatusDisplayTemp": "=toDouble"
+                      }
+                    },
+                    {
+                      "operation": "modify-overwrite-beta",
+                      "spec": {
+                        "temperatureSetpointCelsius": "=divide(@(1,temperatureSetpointCelsius), 10)",
+                        "temperatureAmbientCelsius": "=divide(@(1,temperatureAmbientCelsius), 10)",
+                        "OvenUpperCavity_CycleSetTargetTemp": "=divide(@(1,OvenUpperCavity_CycleSetTargetTemp),  0.1)",
+                        "OvenUpperCavity_DisplStatusDisplayTemp": "=divide(@(1,OvenUpperCavity_DisplStatusDisplayTemp), 10)",
+                        "OvenUpperCavity_DisplaySetLightOn": "=toInteger"
+                      }
+                    },
+                    {
+                      "operation": "default",
+                      "spec": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            "endPointKey": null
+          }
+        ]
+      },
+      {
+        "name": "localizeDateTime",
+        "enabled": true,
+        "serviceProvider": [
+          {
+            "name": "WCloud",
+            "enabled": true,
+            "config": "",
+            "endPointKey": null
+          }
+        ]
+      }
+    ]
+  }
+}
