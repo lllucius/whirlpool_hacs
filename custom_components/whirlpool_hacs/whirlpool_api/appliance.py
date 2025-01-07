@@ -16,7 +16,7 @@ SETVAL_VALUE_OFF = "0"
 SETVAL_VALUE_ON = "1"
 
 class Appliance:
-    """Whirlpool (abstract) appliance class"""
+    """Whirlpool appliance class"""
 
     handlers = list()
 
