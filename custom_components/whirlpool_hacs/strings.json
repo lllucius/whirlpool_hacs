@@ -96,6 +96,12 @@
       "DryCavity_CycleStatusWet": {
         "name": "Wet"
       },
+      "OvenUpperCavity_OpStatusDoorLocked": {
+        "name": "Door Locked"
+      },
+      "OvenUpperCavity_OpStatusDoorOpen": {
+        "name": "Door Open"
+      },
       "WashCavity_ChangeStatusBulkDispense1": {
         "name": "Bulk Dispense1"
       },
@@ -162,13 +168,28 @@
       "WashCavity_OpStatusDispenserDrawerOpen": {
         "name": "Dispenser Drawer Open"
       },
+      "XCat_PowerStatusPowerOutage": {
+        "name": "Power Outage"
+      },
       "XCat_RemoteSetRemoteControlEnable": {
         "name": "Remote Control Enable"
+      },
+      "XCat_WifiStatusIspCheck": {
+        "name": "Isp Check"
       }
     },
     "button": {
+      "XCat_WifiSetDeprovisionWifiCommModule": {
+        "name": "Deprovision Wifi Comm Module"
+      },
+      "XCat_WifiSetDisableWifiCommModule": {
+        "name": "Disable Wifi Comm Module"
+      },
       "XCat_WifiSetPublishApplianceState": {
         "name": "Publish Appliance State"
+      },
+      "XCat_WifiSetRebootWifiCommModule": {
+        "name": "Reboot Wifi Comm Module"
       }
     },
     "number": {
@@ -189,6 +210,39 @@
       },
       "DryCavity_CycleSetManualDryTime": {
         "name": "Manual Dry Time"
+      },
+      "KitchenTimer01_SetTimeSet": {
+        "name": "Time Set"
+      },
+      "OvenUpperCavity_CustomCycleSetId": {
+        "name": "Id"
+      },
+      "OvenUpperCavity_CustomCycleSetStep": {
+        "name": "Step"
+      },
+      "OvenUpperCavity_CycleSetTargetTemp": {
+        "name": "Target Temp"
+      },
+      "OvenUpperCavity_DisplaySetEmbeddedUserInstructId": {
+        "name": "Embedded User Instruct Id"
+      },
+      "OvenUpperCavity_TimeSetCookTimeSet": {
+        "name": "Cook Time Set"
+      },
+      "OvenUpperCavity_TimeSetDelayTime": {
+        "name": "Delay Time"
+      },
+      "Relational_EntityId": {
+        "name": "Id"
+      },
+      "SysHeader_RecipeSetRecipeId": {
+        "name": "Recipe Id"
+      },
+      "SysHeader_RecipeSetRecipeTime": {
+        "name": "Recipe Time"
+      },
+      "Sys_DisplaySetBrightnessPercent": {
+        "name": "Brightness Percent"
       },
       "WashCavity_CycleSetExtraRinseSelect": {
         "name": "Extra Rinse Select"
@@ -296,12 +350,121 @@
           "VolumeValueOff": "Off"
         }
       },
+      "KitchenTimer01_SetOperations": {
+        "name": "Operations",
+        "state": {
+          "Cancel": "Cancel",
+          "None": "None",
+          "Start": "Start"
+        }
+      },
+      "OvenUpperCavity_CycleSetCleanOvenMode": {
+        "name": "Clean Oven Mode",
+        "state": {
+          "CleanOvenIdle": "Idle",
+          "CleanOvenLow": "Low",
+          "CleanOvenMid": "Mid",
+          "CleanOvenStandard": "Standard",
+          "CleanOvenSteam": "Steam"
+        }
+      },
+      "OvenUpperCavity_CycleSetCommonMode": {
+        "name": "Common Mode",
+        "state": {
+          "CommonModeBake": "Bake",
+          "CommonModeBroil": "Broil",
+          "CommonModeIdle": "Idle",
+          "CommonModeKeepWarm": "Keep Warm",
+          "CommonModeSabbathBake": "Sabbath Bake"
+        }
+      },
+      "OvenUpperCavity_CycleSetFrozenBakeFood": {
+        "name": "Frozen Bake Food",
+        "state": {
+          "FrozenBakeFoodFries": "Fries",
+          "FrozenBakeFoodIdle": "Idle",
+          "FrozenBakeFoodLasagna": "Lasagna",
+          "FrozenBakeFoodMeals": "Meals",
+          "FrozenBakeFoodNuggets": "Nuggets",
+          "FrozenBakeFoodPie": "Pie",
+          "FrozenBakeFoodPizza": "Pizza"
+        }
+      },
+      "OvenUpperCavity_DisplaySetEmbUsrInsCmpltAction": {
+        "name": "Emb Usr Ins Cmplt Action",
+        "state": {
+          "AutoAdvance": "Auto Advance",
+          "Unset": "Unset",
+          "WaitForAllEvents": "Wait For All Events",
+          "WaitForAnyEvent": "Wait For Any Event",
+          "WaitForDoor": "Wait For Door",
+          "WaitForNextAndTime": "Wait For Next And Time",
+          "WaitForNextCmd": "Wait For Next Cmd",
+          "WaitForNextOrDoor": "Wait For Next Or Door",
+          "WaitForNextOrTime": "Wait For Next Or Time",
+          "WaitForTimeAndDoor": "Wait For Time And Door",
+          "WaitForTimeExpire": "Wait For Time Expire",
+          "WaitForTimeOrDoor": "Wait For Time Or Door"
+        }
+      },
+      "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+        "name": "Cook Time Complete Action",
+        "state": {
+          "KeepWarm": "Keep Warm",
+          "ProcessCmpltActionAutoAdvance": "Process Cmplt Action Auto Advance",
+          "ProcessCmpltActionWaitForDoor": "Process Cmplt Action Wait For Door",
+          "ProcessCmpltActionWaitForEvent": "Process Cmplt Action Wait For Event",
+          "ProcessCmpltActionWaitForNextCommand": "Process Cmplt Action Wait For Next Command",
+          "ProcessCmpltActionWaitForTimeExpire": "Process Cmplt Action Wait For Time Expire",
+          "StayOn": "Stay On",
+          "TurnOff": "Turn Off",
+          "Unset": "Unset"
+        }
+      },
+      "OvenUpperCavity_OpSetMachineInstructCmpltAction": {
+        "name": "Machine Instruct Cmplt Action",
+        "state": {
+          "AutoAdvance": "Auto Advance",
+          "Unset": "Unset",
+          "WaitForAllEvents": "Wait For All Events",
+          "WaitForAnyEvent": "Wait For Any Event",
+          "WaitForDoor": "Wait For Door",
+          "WaitForNextAndTime": "Wait For Next And Time",
+          "WaitForNextCmd": "Wait For Next Cmd",
+          "WaitForNextOrDoor": "Wait For Next Or Door",
+          "WaitForNextOrTime": "Wait For Next Or Time",
+          "WaitForTimeAndDoor": "Wait For Time And Door",
+          "WaitForTimeExpire": "Wait For Time Expire",
+          "WaitForTimeOrDoor": "Wait For Time Or Door"
+        }
+      },
+      "OvenUpperCavity_OpSetOperations": {
+        "name": "Operations",
+        "state": {
+          "Cancel": "Cancel",
+          "Continue": "Continue",
+          "Modify": "Modify",
+          "None": "None",
+          "SetOnDisplay": "Set On Display",
+          "Start": "Start"
+        }
+      },
       "Sys_DisplaySetLanguage": {
         "name": "Language",
         "state": {
+          "CanadianFrench": "Canadian French",
+          "English": "English",
           "LanguageCanadianFrench": "Canadian French",
           "LanguageEnglish": "English",
-          "LanguageLatinAmericanSpanish": "Latin American Spanish"
+          "LanguageLatinAmericanSpanish": "Latin American Spanish",
+          "LatinAmericanSpanish": "Latin American Spanish"
+        }
+      },
+      "Sys_DisplaySetTempUnits": {
+        "name": "Temp Units",
+        "state": {
+          "DegreesC": "C",
+          "DegreesF": "F"
         }
       },
       "Sys_OpSetAlertToneVolume": {
@@ -311,6 +474,26 @@
           "VolumeValueLow": "Low",
           "VolumeValueMedium": "Medium",
           "VolumeValueOff": "Off"
+        }
+      },
+      "Sys_OperationSetAlertToneVolume": {
+        "name": "Alert Tone Volume",
+        "state": {
+          "VolumeHigh": "High",
+          "VolumeLow": "Low",
+          "VolumeMax": "Max",
+          "VolumeMedium": "Medium",
+          "VolumeOff": "Off"
+        }
+      },
+      "Sys_OperationSetKeyPressToneVolume": {
+        "name": "Key Press Tone Volume",
+        "state": {
+          "VolumeHigh": "High",
+          "VolumeLow": "Low",
+          "VolumeMax": "Max",
+          "VolumeMedium": "Medium",
+          "VolumeOff": "Off"
         }
       },
       "WashCavity_CycleSetBulkDispense1Enable": {
@@ -402,6 +585,14 @@
           "WashTempTapCold": "Tap Cold",
           "WashTempWarm": "Warm"
         }
+      },
+      "XCat_WifiSetIspAuthorized": {
+        "name": "Isp Authorized",
+        "state": {
+          "IspAuthorizedImmediate": "Immediate",
+          "IspAuthorizedNotAuthorized": "Not Authorized",
+          "IspAuthorizedSchedule": "Schedule"
+        }
       }
     },
     "sensor": {
@@ -436,6 +627,68 @@
           "AirFlowGood": "Good"
         }
       },
+      "KitchenTimer01_StatusState": {
+        "name": "State",
+        "state": {
+          "Completed": "Completed",
+          "Idle": "Idle",
+          "Running": "Running"
+        }
+      },
+      "KitchenTimer01_StatusTimeRemaining": {
+        "name": "Time Remaining"
+      },
+      "OvenUpperCavity_DisplStatusDisplayTemp": {
+        "name": "Display Temp"
+      },
+      "OvenUpperCavity_OpStatusCookTimeState": {
+        "name": "Cook Time State",
+        "state": {
+          "Complete": "Complete",
+          "Idle": "Idle",
+          "Running": "Running"
+        }
+      },
+      "OvenUpperCavity_OpStatusState": {
+        "name": "State",
+        "state": {
+          "Cooling": "Cooling",
+          "Delaying": "Delaying",
+          "Idle": "Idle",
+          "Preheating": "Preheating",
+          "Programming": "Programming",
+          "Steady": "Steady"
+        }
+      },
+      "OvenUpperCavity_TimeStatusCookTimeRemaining": {
+        "name": "Cook Time Remaining"
+      },
+      "OvenUpperCavity_TimeStatusCycleTimeElapsed": {
+        "name": "Cycle Time Elapsed"
+      },
+      "OvenUpperCavity_TimeStatusDelayTimeRemaining": {
+        "name": "Delay Time Remaining"
+      },
+      "OvenUpperCavity__RecipeSetFacadeCookTime": {
+        "name": "Facade Cook Time"
+      },
+      "OvenUpperCavity__RecipeSetFacadeDisplayTemp": {
+        "name": "Facade Display Temp"
+      },
+      "Sys_AlertStatusNotification": {
+        "name": "Notification",
+        "state": {
+          "None": "None",
+          "PreheatComplete": "Preheat Complete",
+          "PreheatMinus25": "Preheat Minus25"
+        }
+      },
+      "Sys_DisplayStatusBroilDisplayType": {
+        "name": "Broil Display Type",
+        "state": {
+          "VariableTemperature": ""
+        }
+      },
       "WashCavity_OpStatusBulkDispense1Level": {
         "name": "Bulk Dispense1 Level",
         "state": {
@@ -448,6 +701,12 @@
       },
       "XCat_ConfigSetMaxCustomCycles": {
         "name": "Max Custom Cycles"
+      },
+      "XCat_ConfigSetMaxRelationalMemory": {
+        "name": "Max Relational Memory"
+      },
+      "XCat_ConfigSetMaxRelationalSteps": {
+        "name": "Max Relational Steps"
       },
       "XCat_OdometerStatusCycleCount": {
         "name": "Cycle Count"
@@ -488,6 +747,24 @@
       },
       "DryCavity_CycleSetStaticGuardEnable": {
         "name": "Static Guard Enable"
+      },
+      "OvenUpperCavity_DisplaySetLightOn": {
+        "name": "Light On"
+      },
+      "OvenUpperCavity_OpSetSabbathModeActive": {
+        "name": "Sabbath Mode Active"
+      },
+      "Sys_DisplaySetEnable24Hour": {
+        "name": "Enable24 Hour"
+      },
+      "Sys_OperationSetControlLock": {
+        "name": "Control Lock"
+      },
+      "Sys_OperationSetQuietModeEnabled": {
+        "name": "Quiet Mode Enabled"
+      },
+      "Sys_OperationSetSabbathModeEnabled": {
+        "name": "Sabbath Mode Enabled"
       },
       "WashCavity_CycleSetFabricSoftenerEnable": {
         "name": "Fabric Softener Enable"
